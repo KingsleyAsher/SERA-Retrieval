@@ -8,4 +8,4 @@ The original private workspace remains the experiment authority. Public copies a
 
 Maintain one stable README in English and Chinese, with dated status. Each accepted research part adds its frozen protocol, relevant code, results, limitations and changelog entry. Use commits/tags to identify stages; major milestones may later receive releases and DOI archives. No unattended updates are configured.
 
-No license has been selected. Do not describe the repository as licensed open-source software yet. Original research direction comes from the project owner; AI-assisted theory and implementation must remain distinguishable from validated observations. Third-party research links do not grant rights to third-party implementations or datasets.
+Original project code and documentation are licensed under Apache-2.0 following owner authorization on 2026-10-29. Third-party materials and dependencies retain their own terms. Original research direction comes from the project owner; AI-assisted theory and implementation must remain distinguishable from validated observations. Third-party research links do not grant rights to third-party implementations or datasets.

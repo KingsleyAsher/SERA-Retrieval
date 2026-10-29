@@ -44,4 +44,4 @@ These checks use fictitious vectors and temporary SQLite databases; they do not 
 
 Protocols, counterexamples, negative results, setup costs, seed costs, maintenance and fallbacks are retained. Vector top-K overlap is distinct from semantic relevance. Each part is reviewed before the next part starts.
 
-No open-source license has been selected for this initial research archive. Public visibility is not a general grant to reuse the work. Third-party references and dependencies retain their respective terms. Citation is appreciated: cite a specific commit and the relevant report, and distinguish the user's research direction, model-assisted proposals, and experimentally verified observations.
+Original project code and documentation are licensed under [Apache-2.0](LICENSE). Third-party references, dependencies and any separately identified materials retain their respective terms. Citation is appreciated: cite a specific commit and the relevant report, and distinguish the user's research direction, model-assisted proposals, and experimentally verified observations.

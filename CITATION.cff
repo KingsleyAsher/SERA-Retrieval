@@ -8,3 +8,4 @@ repository-code: "https://github.com/KingsleyAsher/SERA-Retrieval"
 url: "https://github.com/KingsleyAsher/SERA-Retrieval"
 date-released: 2026-10-29
 abstract: "Frontier research on sparse activation, state reuse and predictive prefetching for retrieval. Stable overall advantages over strong baselines remain unproven."
+license: Apache-2.0
