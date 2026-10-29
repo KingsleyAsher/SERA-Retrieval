@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-28",
+  "stage": 2,
+  "authorization": "user: 好的，开始吧; authorizes stage two only",
+  "hypothesis": "A shared snapshot, score, provenance and resource interface permits fair backend comparison and correct update propagation; no novelty claim",
+  "source": "immutable plan-v1-stage1 snapshot revision 1216, 1213 chunks, BGE-M3 dense1024",
+  "workload": "existing v0.14 authored anchor and rewrite queries using existing cached BGE-M3 embeddings only; engineering diagnostics, not sealed test or semantic gold",
+  "backends": ["full canonical normalized_ip_f64_v1", "USearch HNSW f32 candidates50 ef128, canonical f64 rerank", "Chinese character bigram BM25 plus dense reciprocal rank fusion; distinct rrf contract"],
+  "common_options": ["same immutable vector/text layout", "same snapshot-scoped exact result LRU", "same visibility/source/date filters", "same transactionally versioned update store"],
+  "metrics": ["canonical vector top10 overlap separately from semantic relevance", "P50/P95 and raw durations, no stable P99", "snapshot/vector/lexical/ANN initialization", "search/rerank/source fetch/state commit", "logical reads, model/network, cache bytes and maintenance", "ANN visited and distance counts when exposed; unknown otherwise"],
+  "passes": "same-snapshot provenance and filters; append/modify/delete/visibility changes visible on new snapshot; old snapshot remains internally consistent; budget truncation has charged resumable state; invalid requests rejected; shared cache cannot cross snapshots or score contracts",
+  "adjustment": "Unavailable instrumentation is explicit unknown, never zero or a hard budget guarantee. No strict certificates or probabilistic guarantee. Labels remain unreviewed; no formal semantic uplift conclusion.",
+  "repetitions": 3,
+  "query_selection": "16 anchors and two rewrites, fixed asset order, one pass per backend per repetition with deterministic backend order rotation",
+  "candidates": 50,
+  "hnsw": {"connectivity": 16, "expansion_add": 128, "expansion_search": 128},
+  "cache_capacity_entries": 32,
+  "stop": "deliver stage-two report then await user confirmation before stage three",
+  "new_embedding_calls": false,
+  "expert_training": false,
+  "production_path_changed": false
+}

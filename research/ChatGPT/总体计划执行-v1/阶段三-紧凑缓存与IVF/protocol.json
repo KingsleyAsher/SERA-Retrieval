@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-29",
+  "stage": "3.2 compact cache and controllable IVF",
+  "authorization": "用户：那你现在同步启动下一阶段吗；本方明确开始本部分。后续用户将模型审阅分流到分支会话，本会话继续实现与实验。",
+  "hypotheses": ["Resident binary candidate arrays remove JSON query decoding overhead, but improvement over the old prototype is not architecture uplift", "Seed-rescored list priorities can yield better canonical top10 overlap at the same total vector budget, or require fewer vectors at a realizable matching quality point"],
+  "dataset": "same immutable 1213 chunks revision1216, existing cached BGE-M3 dense1024, 16 anchors and 32 rewrites; development diagnostics only",
+  "trace": "each family anchor,rewrite1,repeat rewrite1,rewrite2,repeat rewrite2; charged ordinary anchor K10 prewarm then charged ANN old top-C fill; no future fill",
+  "repetitions": 3,
+  "layout_matrix": "ANN50/full references plus JSON and compact variants of seed-only and seed+ANN50 at C10/50/200; same scoring/source/commit interfaces",
+  "ivf_matrix": "nlist16/64; KMeans n_init1 random_state20261029 max_iter50 algorithm lloyd; cold centroid inner-product order vs warm max(centroid score, observed seed score per list); vector budgets128/256/512/1213 INCLUDING seeds; C10/50/200 with C<=budget. No parameter tuning after results.",
+  "ivf_stopping": "fixed admitted vector budget or all eligible vectors exhausted, same for warm/cold; no bound pruning or confidence stop in this part. Score every selected vector once, checkpoint frontier/member cursor and seed-score progress.",
+  "ivf_comparison": "same-budget quality and actual achievable quality-work points; do not infer visit reduction just from changed ordering. Also compare full and mature ANN; fewer vector scores need not mean lower total latency.",
+  "common": "same resident snapshot, 32-entry 4MiB exact request LRU, source checks and SQLite FULL per request; all backends may share ordinary layout optimizations. Candidate cache16 entries 4MiB, binary vector arrays and ID/version arrays for compact; JSON reference retained.",
+  "costs": "model cache reads, setup, KMeans/index build, entry fill/write, matching vectors/metadata/payload, coarse scores, posting reads, seed verification, actual unique vector scores, source/commit and lifecycle all recorded. Physical IO/RSS and uncached API latency unknown.",
+  "checks": "compact and JSON same match on identical entries; budget interruption during seed scoring/frontier/canonical score and source retains prior work; new Engine resume; scope/snapshot isolation, no duplicates; full-budget IVF equals canonical reference; empty/self-only cache falls back within parent budget",
+  "operator_quality_gate": "rewrite minimum and P10 overlap>=.9; report mean separately. No reviewed semantic quality claim and no certificate.",
+  "adjustment": "No net benefit at fixed matrix: retain failures and keep optional. Do not expand tuning, size, training or bounds to rescue this part. Next part needs user review.",
+  "stop": "deliver this part and wait. External-model analysis is owned by the user's review branch; do not inspect later external deliveries proactively. No strict certification, prefetch, learned model, corpus expansion or production replacement."
+}

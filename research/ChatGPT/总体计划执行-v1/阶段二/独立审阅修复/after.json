@@ -1,0 +1,62 @@
+{
+  "module_sha256": "b316f760923c2a6fc5ebb60a2943fa409119e859b3725968806a298e3a684d24",
+  "findings": {
+    "P1_prepare_resume_duplicates_completed_work": false,
+    "P2_checkpoint_can_erase_consumed": false,
+    "P3_origin_verification_scope_unspecified": false,
+    "P3_stored_text_edit_undetected": false,
+    "P4_foreign_snapshot_accepted": false,
+    "P4_copied_store_identity_collides": false,
+    "P5_hybrid_contract_mislabels_pool": false
+  },
+  "evidence": {
+    "P1": {
+      "final_kind": "approximate",
+      "consumed": {
+        "ann_calls": 1,
+        "ann_distance_evaluations": 4,
+        "ann_visited_members": 3,
+        "cache_lookups": 0,
+        "index_builds": 1,
+        "index_input_vector_bytes": 36,
+        "metadata_checks": 3,
+        "state_commits": 2,
+        "state_payload_bytes": 2489,
+        "lexical_queries": 1,
+        "lexical_query_tokens": 3,
+        "lexical_builds": 1,
+        "lexical_build_input_bytes": 39,
+        "lexical_matches": 1,
+        "canonical_scores": 3,
+        "vector_logical_bytes": 72,
+        "source_reads": 2,
+        "source_logical_bytes": 26,
+        "materialized_text_checks": 2
+      }
+    },
+    "P2": {
+      "fresh_ledger_rejected": true
+    },
+    "P3": {
+      "source_verification": {
+        "snapshot_content": true,
+        "original_file": false
+      },
+      "persisted_digest_column_present": true
+    },
+    "P5": {
+      "contract": "rrf60_dense3_lex3_v1"
+    }
+  },
+  "expected_after_fix": {
+    "P1_prepare_resume_duplicates_completed_work": false,
+    "P2_checkpoint_can_erase_consumed": false,
+    "P3_origin_verification_scope_unspecified": false,
+    "P3_stored_text_edit_undetected": false,
+    "P4_foreign_snapshot_accepted": false,
+    "P4_copied_store_identity_collides": false,
+    "P5_hybrid_contract_mislabels_pool": false
+  },
+  "all_flips_as_expected": true,
+  "scope": "tiny fictitious SQLite reproductions; no performance or fault-injection claims"
+}

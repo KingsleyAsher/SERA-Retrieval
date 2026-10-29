@@ -1,0 +1,868 @@
+{
+  "stage": 2,
+  "run": "run-002",
+  "run_date": "2026-10-29",
+  "code_sha256": {
+    "framework.py": "ce251412b456cd156f593d5fc4c42e735c091de8e72a119d444cabf72e4c6a49",
+    "run_stage2.py": "2a84f600c5d8133b0c86770291ff29d6b5bc0690f282f685330c0b4dc0f818ef"
+  },
+  "protocol_sha256": "bd52b3478696f7f263d82e2d63f91b4694897f706f5d29c3beda4f0c208a38e5",
+  "dataset": {
+    "chunks": 1213,
+    "dimension": 1024,
+    "revision": 1216,
+    "vector_sha256": "9f2b5738cbe844ea7af3d6f14931131887f4dba78523f4bd7ef5b71ea96f3307"
+  },
+  "initialization": {
+    "source_sqlite_materialize_seconds": 0.2996802999987267,
+    "isolated_import_commit_seconds": 0.07190959999570623,
+    "snapshot_materialize_seconds": 0.025132799986749887,
+    "snapshot_logical_bytes": 12252620,
+    "snapshot_materialize_repeat_ms": {
+      "n": 5,
+      "mean": 31.51806000387296,
+      "p50": 31.452099996386096,
+      "p95": 31.722740008262917,
+      "minimum": 31.369499978609383,
+      "maximum": 31.751500006066635
+    },
+    "backends": {
+      "full": [],
+      "ann": [
+        {
+          "type": "ann_build",
+          "n": 1213,
+          "seconds": 0.10809310001786798
+        },
+        {
+          "type": "ann_build",
+          "n": 237,
+          "seconds": 0.012323400005698204
+        },
+        {
+          "type": "ann_build",
+          "n": 150,
+          "seconds": 0.005209099996136501
+        },
+        {
+          "type": "ann_build",
+          "n": 1077,
+          "seconds": 0.09837449999758974
+        }
+      ],
+      "hybrid": [
+        {
+          "type": "ann_build",
+          "n": 1213,
+          "seconds": 0.10845280002104118
+        },
+        {
+          "type": "ann_build",
+          "n": 237,
+          "seconds": 0.012234900001203641
+        },
+        {
+          "type": "ann_build",
+          "n": 150,
+          "seconds": 0.005085699987830594
+        },
+        {
+          "type": "ann_build",
+          "n": 1077,
+          "seconds": 0.09785879999981262
+        }
+      ]
+    }
+  },
+  "embedding": {
+    "model": "siliconflow.cn/BAAI-bge-m3/dense1024/no-prefix/unit/v1",
+    "cache_inputs": 48,
+    "cache_lookup_seconds": 0.011446199991041794,
+    "new_api_calls": 0,
+    "network_seconds": 0
+  },
+  "aggregate": [
+    {
+      "backend": "full",
+      "score_contract": "normalized_ip_f64_v1",
+      "requests": 144,
+      "all_total_ms": {
+        "n": 144,
+        "mean": 4.217455555691332,
+        "p50": 3.994999991846271,
+        "p95": 5.013400003372226,
+        "minimum": 3.5828000109177083,
+        "maximum": 11.049299995647743
+      },
+      "warm_total_ms": {
+        "n": 144,
+        "mean": 4.217455555691332,
+        "p50": 3.994999991846271,
+        "p95": 5.013400003372226,
+        "minimum": 3.5828000109177083,
+        "maximum": 11.049299995647743
+      },
+      "component_ms": {
+        "prepare": {
+          "n": 144,
+          "mean": 0.1619236110046687,
+          "p50": 0.15249999705702066,
+          "p95": 0.2319199949852191,
+          "minimum": 0.13070000568404794,
+          "maximum": 0.36040000850334764
+        },
+        "canonical_score": {
+          "n": 144,
+          "mean": 0.8940291619284026,
+          "p50": 0.8465499704470858,
+          "p95": 1.1452900274889544,
+          "minimum": 0.7562999962829053,
+          "maximum": 1.3898999022785574
+        },
+        "rank": {
+          "n": 144,
+          "mean": 0.2783618058149134,
+          "p50": 0.262400004430674,
+          "p95": 0.37941998307360336,
+          "minimum": 0.2358000201638788,
+          "maximum": 0.46469998778775334
+        },
+        "source_fetch": {
+          "n": 144,
+          "mean": 0.034793749162215844,
+          "p50": 0.03329999162815511,
+          "p95": 0.044619990512728684,
+          "minimum": 0.025000044843181968,
+          "maximum": 0.1312999811489135
+        },
+        "state_commit": {
+          "n": 144,
+          "mean": 2.272201389738863,
+          "p50": 2.115549999871291,
+          "p95": 2.7318750057020225,
+          "minimum": 1.7081999976653606,
+          "maximum": 8.968399983132258
+        }
+      },
+      "exact_vector_overlap": {
+        "n": 144,
+        "mean": 1.0,
+        "p50": 1.0,
+        "p95": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "resources": {
+        "canonical_scores": {
+          "n": 144,
+          "mean": 1213.0,
+          "p50": 1213.0,
+          "p95": 1213.0,
+          "minimum": 1213.0,
+          "maximum": 1213.0
+        },
+        "vector_logical_bytes": {
+          "n": 144,
+          "mean": 9936896.0,
+          "p50": 9936896.0,
+          "p95": 9936896.0,
+          "minimum": 9936896.0,
+          "maximum": 9936896.0
+        },
+        "source_logical_bytes": {
+          "n": 144,
+          "mean": 16367.3125,
+          "p50": 16429.0,
+          "p95": 19175.0,
+          "minimum": 11425.0,
+          "maximum": 19570.0
+        },
+        "state_payload_bytes": {
+          "n": 144,
+          "mean": 21685.979166666668,
+          "p50": 21676.5,
+          "p95": 24606.0,
+          "minimum": 16734.0,
+          "maximum": 24936.0
+        },
+        "ann_distance_evaluations": {
+          "n": 144,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        },
+        "ann_visited_members": {
+          "n": 144,
+          "mean": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.0
+        }
+      },
+      "strict_certificates": 0,
+      "semantic_quality": null
+    },
+    {
+      "backend": "ann",
+      "score_contract": "normalized_ip_f64_v1",
+      "requests": 144,
+      "all_total_ms": {
+        "n": 144,
+        "mean": 3.911616666502798,
+        "p50": 2.995700007886626,
+        "p95": 3.9715149861876853,
+        "minimum": 1.791000016964972,
+        "maximum": 111.94269999396056
+      },
+      "warm_total_ms": {
+        "n": 143,
+        "mean": 3.1561545453317645,
+        "p50": 2.994500013301149,
+        "p95": 3.9628500060644,
+        "minimum": 1.791000016964972,
+        "maximum": 5.872000008821487
+      },
+      "component_ms": {
+        "prepare": {
+          "n": 143,
+          "mean": 0.4441951058798476,
+          "p50": 0.4345000197645277,
+          "p95": 0.557499978458509,
+          "minimum": 0.3189999843016267,
+          "maximum": 0.7060000207275152
+        },
+        "canonical_score": {
+          "n": 143,
+          "mean": 0.06403636400607395,
+          "p50": 0.06130000110715628,
+          "p95": 0.08126000757329166,
+          "minimum": 0.049700000090524554,
+          "maximum": 0.1396999869029969
+        },
+        "rank": {
+          "n": 143,
+          "mean": 0.012395804759336415,
+          "p50": 0.012100004823878407,
+          "p95": 0.015680002979934216,
+          "minimum": 0.008299975888803601,
+          "maximum": 0.019800005247816443
+        },
+        "source_fetch": {
+          "n": 143,
+          "mean": 0.030793007210847902,
+          "p50": 0.030499999411404133,
+          "p95": 0.0375999923562631,
+          "minimum": 0.02319994382560253,
+          "maximum": 0.047299981815740466
+        },
+        "state_commit": {
+          "n": 143,
+          "mean": 2.077222378009448,
+          "p50": 1.9362999883014709,
+          "p95": 2.8002999984892085,
+          "minimum": 0.8809999853838235,
+          "maximum": 4.7654999943915755
+        }
+      },
+      "exact_vector_overlap": {
+        "n": 144,
+        "mean": 1.0,
+        "p50": 1.0,
+        "p95": 1.0,
+        "minimum": 1.0,
+        "maximum": 1.0
+      },
+      "resources": {
+        "canonical_scores": {
+          "n": 144,
+          "mean": 50.0,
+          "p50": 50.0,
+          "p95": 50.0,
+          "minimum": 50.0,
+          "maximum": 50.0
+        },
+        "vector_logical_bytes": {
+          "n": 144,
+          "mean": 409600.0,
+          "p50": 409600.0,
+          "p95": 409600.0,
+          "minimum": 409600.0,
+          "maximum": 409600.0
+        },
+        "source_logical_bytes": {
+          "n": 144,
+          "mean": 16367.3125,
+          "p50": 16429.0,
+          "p95": 19175.0,
+          "minimum": 11425.0,
+          "maximum": 19570.0
+        },
+        "state_payload_bytes": {
+          "n": 144,
+          "mean": 21772.340277777777,
+          "p50": 21762.5,
+          "p95": 24692.0,
+          "minimum": 16820.0,
+          "maximum": 25022.0
+        },
+        "ann_distance_evaluations": {
+          "n": 144,
+          "mean": 617.3541666666666,
+          "p50": 621.5,
+          "p95": 701.0,
+          "minimum": 499.0,
+          "maximum": 773.0
+        },
+        "ann_visited_members": {
+          "n": 144,
+          "mean": 132.3125,
+          "p50": 132.0,
+          "p95": 134.0,
+          "minimum": 130.0,
+          "maximum": 135.0
+        }
+      },
+      "strict_certificates": 0,
+      "semantic_quality": null
+    },
+    {
+      "backend": "hybrid",
+      "score_contract": "rrf60_dense50_lex50_v1",
+      "requests": 144,
+      "all_total_ms": {
+        "n": 144,
+        "mean": 8.674372916882728,
+        "p50": 6.853350001620129,
+        "p95": 7.947714984766208,
+        "minimum": 4.259899986209348,
+        "maximum": 309.8294999799691
+      },
+      "warm_total_ms": {
+        "n": 143,
+        "mean": 6.568393007350656,
+        "p50": 6.853099999716505,
+        "p95": 7.900579995475709,
+        "minimum": 4.259899986209348,
+        "maximum": 11.940900003537536
+      },
+      "component_ms": {
+        "prepare": {
+          "n": 143,
+          "mean": 3.5153398613064466,
+          "p50": 3.466199996182695,
+          "p95": 4.564549995120615,
+          "minimum": 2.1890999923925847,
+          "maximum": 5.293599999276921
+        },
+        "canonical_score": {
+          "n": 143,
+          "mean": 0.07126783142908366,
+          "p50": 0.06940000457689166,
+          "p95": 0.09225998073816302,
+          "minimum": 0.049700000090524554,
+          "maximum": 0.1255999959539622
+        },
+        "rank": {
+          "n": 143,
+          "mean": 0.05509930323333955,
+          "p50": 0.053800002206116915,
+          "p95": 0.06643001106567681,
+          "minimum": 0.04710000939667225,
+          "maximum": 0.07330000516958535
+        },
+        "source_fetch": {
+          "n": 143,
+          "mean": 0.03901958384980949,
+          "p50": 0.0369000481441617,
+          "p95": 0.045889950706623495,
+          "minimum": 0.029499991796910763,
+          "maximum": 0.18519998411647975
+        },
+        "state_commit": {
+          "n": 143,
+          "mean": 2.3558006991902563,
+          "p50": 2.3222999880090356,
+          "p95": 2.805910009192303,
+          "minimum": 0.8875999774318188,
+          "maximum": 8.551200007786974
+        }
+      },
+      "exact_vector_overlap": {
+        "n": 144,
+        "mean": 0.3875,
+        "p50": 0.4,
+        "p95": 0.7,
+        "minimum": 0.0,
+        "maximum": 0.7
+      },
+      "resources": {
+        "canonical_scores": {
+          "n": 144,
+          "mean": 50.0,
+          "p50": 50.0,
+          "p95": 50.0,
+          "minimum": 50.0,
+          "maximum": 50.0
+        },
+        "vector_logical_bytes": {
+          "n": 144,
+          "mean": 409600.0,
+          "p50": 409600.0,
+          "p95": 409600.0,
+          "minimum": 409600.0,
+          "maximum": 409600.0
+        },
+        "source_logical_bytes": {
+          "n": 144,
+          "mean": 17189.125,
+          "p50": 17336.0,
+          "p95": 19129.0,
+          "minimum": 13195.0,
+          "maximum": 19942.0
+        },
+        "state_payload_bytes": {
+          "n": 144,
+          "mean": 22888.597222222223,
+          "p50": 22914.0,
+          "p95": 24897.0,
+          "minimum": 18871.0,
+          "maximum": 25800.0
+        },
+        "ann_distance_evaluations": {
+          "n": 144,
+          "mean": 617.3541666666666,
+          "p50": 621.5,
+          "p95": 701.0,
+          "minimum": 499.0,
+          "maximum": 773.0
+        },
+        "ann_visited_members": {
+          "n": 144,
+          "mean": 132.3125,
+          "p50": 132.0,
+          "p95": 134.0,
+          "minimum": 130.0,
+          "maximum": 135.0
+        }
+      },
+      "strict_certificates": 0,
+      "semantic_quality": null
+    }
+  ],
+  "cache": [
+    {
+      "backend": "full",
+      "requests": 4,
+      "miss_ms": {
+        "n": 4,
+        "mean": 4.914749995805323,
+        "p50": 4.945749999023974,
+        "p95": 4.992374990251847,
+        "minimum": 4.7694999957457185,
+        "maximum": 4.997999989427626
+      },
+      "hit_ms": {
+        "n": 4,
+        "mean": 2.9392500000540167,
+        "p50": 2.92615000216756,
+        "p95": 3.0023949817405082,
+        "minimum": 2.892000018619001,
+        "maximum": 3.0126999772619456
+      },
+      "hit_canonical_scores": 0,
+      "source_reads_on_hits": 40
+    },
+    {
+      "backend": "ann",
+      "requests": 4,
+      "miss_ms": {
+        "n": 4,
+        "mean": 3.9408249940606765,
+        "p50": 3.939699992770329,
+        "p95": 4.019604992936365,
+        "minimum": 3.855999995721504,
+        "maximum": 4.027899994980544
+      },
+      "hit_ms": {
+        "n": 4,
+        "mean": 3.0186750009306706,
+        "p50": 3.0209499964257702,
+        "p95": 3.044604987371713,
+        "minimum": 2.988000022014603,
+        "maximum": 3.044799988856539
+      },
+      "hit_canonical_scores": 0,
+      "source_reads_on_hits": 40
+    },
+    {
+      "backend": "hybrid",
+      "requests": 4,
+      "miss_ms": {
+        "n": 4,
+        "mean": 6.981125006859656,
+        "p50": 6.961349994526245,
+        "p95": 7.861090010555927,
+        "minimum": 5.984800023725256,
+        "maximum": 8.01700001466088
+      },
+      "hit_ms": {
+        "n": 4,
+        "mean": 2.9568250101874582,
+        "p50": 2.952399998321198,
+        "p95": 3.054480013088323,
+        "minimum": 2.8547000256367028,
+        "maximum": 3.0678000184707344
+      },
+      "hit_canonical_scores": 0,
+      "source_reads_on_hits": 40
+    }
+  ],
+  "filter_checks": 12,
+  "controlled_update_requests": 6,
+  "update": {
+    "revision": 1217,
+    "commit": {
+      "idempotent": false,
+      "seconds": 0.002297700004419312,
+      "operations": 4,
+      "vector_write_bytes": 24576
+    },
+    "new_snapshot_load_seconds": 0.0311537999950815,
+    "internal_ANN_maintenance": "new snapshot index rebuilt on first use; cost charged",
+    "vectors": "existing BGE-M3 query vectors reused for fictitious mechanics fixtures, no semantic evaluation"
+  },
+  "versions": {
+    "python": "3.13.15",
+    "numpy": "2.5.4",
+    "usearch": "2.26.6",
+    "sqlite": "3.50.4"
+  },
+  "limitations": [
+    "authored old diagnostic queries, no natural trace or reviewed semantic gold",
+    "warm local CPU and SQLite FULL commits, no cold disk or concurrency benchmark",
+    "RRF hybrid is a different scoring contract; vector overlap is not semantic quality",
+    "ANN distance/visited counts exposed; internal byte reads and lexical internal postings work unknown",
+    "logical byte counts omit Python object allocator overhead and physical OS/WAL amplification",
+    "all backends share resident layout and ordinary result LRU; gains are engineering, not architecture novelty",
+    "stage-three mechanisms and stage-four certification not enabled; no formal quality uplift",
+    "no process fault injection or power-loss validation"
+  ],
+  "cost_detail": {
+    "full": {
+      "first_request_seconds": {
+        "prepare": 0.00019219997921027243,
+        "canonical_score": 0.000798500026576221,
+        "rank": 0.0003182999789714813,
+        "source_fetch": 4.1700026486068964e-05,
+        "state_commit": 0.004003600013675168,
+        "total": 0.006047099974239245
+      },
+      "snapshot_resident_payload_bytes": 12252620,
+      "index_resident_bytes": 0,
+      "updates": [
+        {
+          "consumed": {
+            "cache_lookups": 1,
+            "metadata_checks": 1213,
+            "canonical_scores": 1212,
+            "vector_logical_bytes": 9928704,
+            "source_reads": 10,
+            "source_logical_bytes": 14101,
+            "provenance_checks": 10,
+            "state_commits": 1,
+            "state_payload_bytes": 18834
+          },
+          "reserved": {
+            "cache_lookups": 0,
+            "metadata_checks": 0,
+            "canonical_scores": 0,
+            "vector_logical_bytes": 0,
+            "source_reads": 0,
+            "source_logical_bytes": 0,
+            "provenance_checks": 0,
+            "state_commits": 0
+          },
+          "limits": {},
+          "seconds": {
+            "prepare": 0.0002784999960567802,
+            "canonical_score": 0.0011229001102037728,
+            "rank": 0.0003721999819390476,
+            "source_fetch": 4.0300015825778246e-05,
+            "state_commit": 0.002439500007312745,
+            "total": 0.0050645000010263175
+          }
+        },
+        {
+          "consumed": {
+            "cache_lookups": 1,
+            "metadata_checks": 1213,
+            "canonical_scores": 1212,
+            "vector_logical_bytes": 9928704,
+            "source_reads": 10,
+            "source_logical_bytes": 15506,
+            "provenance_checks": 10,
+            "state_commits": 1,
+            "state_payload_bytes": 20516
+          },
+          "reserved": {
+            "cache_lookups": 0,
+            "metadata_checks": 0,
+            "canonical_scores": 0,
+            "vector_logical_bytes": 0,
+            "source_reads": 0,
+            "source_logical_bytes": 0,
+            "provenance_checks": 0,
+            "state_commits": 0
+          },
+          "limits": {},
+          "seconds": {
+            "prepare": 0.0002502000133972615,
+            "canonical_score": 0.0010415998985990882,
+            "rank": 0.00039709999691694975,
+            "source_fetch": 4.210002953186631e-05,
+            "state_commit": 0.002599200000986457,
+            "total": 0.004957800003467128
+          }
+        }
+      ]
+    },
+    "ann": {
+      "first_request_seconds": {
+        "ann_build": 0.10808380000526085,
+        "ann_search": 0.00035519999801181257,
+        "prepare": 0.10865790001116693,
+        "canonical_score": 0.00016419999883510172,
+        "rank": 1.5600002370774746e-05,
+        "source_fetch": 4.7900015488266945e-05,
+        "state_commit": 0.002458099974319339,
+        "total": 0.11194269999396056
+      },
+      "snapshot_resident_payload_bytes": 12252620,
+      "index_resident_bytes": 16796992,
+      "updates": [
+        {
+          "consumed": {
+            "cache_lookups": 1,
+            "metadata_checks": 1213,
+            "index_builds": 1,
+            "index_input_vector_bytes": 4964352,
+            "ann_calls": 1,
+            "ann_distance_evaluations": 559,
+            "ann_visited_members": 131,
+            "canonical_scores": 50,
+            "vector_logical_bytes": 409600,
+            "source_reads": 10,
+            "source_logical_bytes": 14101,
+            "provenance_checks": 10,
+            "state_commits": 1,
+            "state_payload_bytes": 18972
+          },
+          "reserved": {
+            "cache_lookups": 0,
+            "metadata_checks": 0,
+            "index_builds": 0,
+            "index_input_vector_bytes": 0,
+            "ann_calls": 0,
+            "ann_distance_evaluations": 0,
+            "ann_visited_members": 0,
+            "canonical_scores": 0,
+            "vector_logical_bytes": 0,
+            "source_reads": 0,
+            "source_logical_bytes": 0,
+            "provenance_checks": 0,
+            "state_commits": 0
+          },
+          "limits": {},
+          "seconds": {
+            "ann_build": 0.11499450000701472,
+            "ann_search": 0.0002342999796383083,
+            "prepare": 0.11555190000217408,
+            "canonical_score": 0.00014479999663308263,
+            "rank": 2.710000262595713e-05,
+            "source_fetch": 5.720005719922483e-05,
+            "state_commit": 0.0024776999780442566,
+            "total": 0.1189279000100214
+          }
+        },
+        {
+          "consumed": {
+            "cache_lookups": 1,
+            "metadata_checks": 1213,
+            "ann_calls": 1,
+            "ann_distance_evaluations": 558,
+            "ann_visited_members": 131,
+            "canonical_scores": 50,
+            "vector_logical_bytes": 409600,
+            "source_reads": 10,
+            "source_logical_bytes": 15506,
+            "provenance_checks": 10,
+            "state_commits": 1,
+            "state_payload_bytes": 20602
+          },
+          "reserved": {
+            "cache_lookups": 0,
+            "metadata_checks": 0,
+            "ann_calls": 0,
+            "ann_distance_evaluations": 0,
+            "ann_visited_members": 0,
+            "canonical_scores": 0,
+            "vector_logical_bytes": 0,
+            "source_reads": 0,
+            "source_logical_bytes": 0,
+            "provenance_checks": 0,
+            "state_commits": 0
+          },
+          "limits": {},
+          "seconds": {
+            "ann_search": 0.00018309999722987413,
+            "prepare": 0.00044960001832805574,
+            "canonical_score": 9.499999578110874e-05,
+            "rank": 2.0400009816512465e-05,
+            "source_fetch": 3.979995381087065e-05,
+            "state_commit": 0.0016962999943643808,
+            "total": 0.002900300023611635
+          }
+        }
+      ]
+    },
+    "hybrid": {
+      "first_request_seconds": {
+        "ann_build": 0.10844640000141226,
+        "ann_search": 0.00019350001821294427,
+        "lexical_build": 0.1943776000116486,
+        "lexical_search": 0.19746550000854768,
+        "prepare": 0.3063230999978259,
+        "canonical_score": 0.00017169999773614109,
+        "rank": 7.040001219138503e-05,
+        "source_fetch": 5.170004442334175e-05,
+        "state_commit": 0.0026082000113092363,
+        "total": 0.3098294999799691
+      },
+      "snapshot_resident_payload_bytes": 12252620,
+      "index_resident_bytes": 16796992,
+      "updates": [
+        {
+          "consumed": {
+            "cache_lookups": 1,
+            "metadata_checks": 1213,
+            "index_builds": 1,
+            "index_input_vector_bytes": 4964352,
+            "ann_calls": 1,
+            "ann_distance_evaluations": 559,
+            "ann_visited_members": 131,
+            "lexical_builds": 1,
+            "lexical_build_input_bytes": 1987302,
+            "lexical_queries": 1,
+            "lexical_query_tokens": 23,
+            "lexical_matches": 1164,
+            "canonical_scores": 50,
+            "vector_logical_bytes": 409600,
+            "source_reads": 10,
+            "source_logical_bytes": 15769,
+            "provenance_checks": 10,
+            "state_commits": 1,
+            "state_payload_bytes": 21108
+          },
+          "reserved": {
+            "cache_lookups": 0,
+            "metadata_checks": 0,
+            "index_builds": 0,
+            "index_input_vector_bytes": 0,
+            "ann_calls": 0,
+            "ann_distance_evaluations": 0,
+            "ann_visited_members": 0,
+            "lexical_builds": 0,
+            "lexical_build_input_bytes": 0,
+            "lexical_queries": 0,
+            "lexical_query_tokens": 0,
+            "lexical_matches": 0,
+            "canonical_scores": 0,
+            "vector_logical_bytes": 0,
+            "source_reads": 0,
+            "source_logical_bytes": 0,
+            "provenance_checks": 0,
+            "state_commits": 0
+          },
+          "limits": {},
+          "seconds": {
+            "ann_build": 0.11857930000405759,
+            "ann_search": 0.00019990000873804092,
+            "lexical_build": 0.24077560001751408,
+            "lexical_search": 0.24453759999596514,
+            "prepare": 0.36362150000059046,
+            "canonical_score": 0.00016110000433400273,
+            "rank": 8.079997496679425e-05,
+            "source_fetch": 5.6699966080486774e-05,
+            "state_commit": 0.0028454000130295753,
+            "total": 0.36782749998383224
+          }
+        },
+        {
+          "consumed": {
+            "cache_lookups": 1,
+            "metadata_checks": 1213,
+            "ann_calls": 1,
+            "ann_distance_evaluations": 558,
+            "ann_visited_members": 131,
+            "lexical_queries": 1,
+            "lexical_query_tokens": 18,
+            "lexical_matches": 1104,
+            "canonical_scores": 50,
+            "vector_logical_bytes": 409600,
+            "source_reads": 10,
+            "source_logical_bytes": 19026,
+            "provenance_checks": 10,
+            "state_commits": 1,
+            "state_payload_bytes": 24891
+          },
+          "reserved": {
+            "cache_lookups": 0,
+            "metadata_checks": 0,
+            "ann_calls": 0,
+            "ann_distance_evaluations": 0,
+            "ann_visited_members": 0,
+            "lexical_queries": 0,
+            "lexical_query_tokens": 0,
+            "lexical_matches": 0,
+            "canonical_scores": 0,
+            "vector_logical_bytes": 0,
+            "source_reads": 0,
+            "source_logical_bytes": 0,
+            "provenance_checks": 0,
+            "state_commits": 0
+          },
+          "limits": {},
+          "seconds": {
+            "ann_search": 0.00029779999749735,
+            "lexical_search": 0.002286300004925579,
+            "prepare": 0.002880799991544336,
+            "canonical_score": 0.0001747000205796212,
+            "rank": 7.999999797903001e-05,
+            "source_fetch": 4.900002386420965e-05,
+            "state_commit": 0.0029027999844402075,
+            "total": 0.0068539000058081
+          }
+        }
+      ]
+    }
+  },
+  "request_counts": {
+    "main": 432,
+    "cache_requests": 24,
+    "filter": 12,
+    "controlled_update": 6
+  },
+  "canonical_read_reduction_only": 0.9587798845836768,
+  "warm_ann_total_reduction_vs_full": 0.25164485940518644,
+  "post_review": {
+    "date": "2026-10-29",
+    "current_framework_sha256": "b316f760923c2a6fc5ebb60a2943fa409119e859b3725968806a298e3a684d24",
+    "performance_code_sha256": "ce251412b456cd156f593d5fc4c42e735c091de8e72a119d444cabf72e4c6a49",
+    "performance_rerun": false,
+    "performance_code_preserved": "独立审阅修复/framework-before-ce251412.py",
+    "report": "../阶段二后交付审阅-2026-10-29.md"
+  }
+}

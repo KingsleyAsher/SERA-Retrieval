@@ -218,3 +218,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# SERA private research and credentials
+.local-secrets/
+.private-kb-experiments/
+.env
+.env.*
+!.env.example
+# Local databases and generated runtime state
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+publication-checks/

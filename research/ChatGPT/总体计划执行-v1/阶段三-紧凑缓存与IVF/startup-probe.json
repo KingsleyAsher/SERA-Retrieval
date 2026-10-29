@@ -1,0 +1,6 @@
+{
+  "executor_import_seconds": 0.21787939997739159,
+  "sklearn_import_seconds": 1.001143100002082,
+  "child_process_wall_seconds": 1.3819851000152994,
+  "scope": "one new Python process with existing OS caches; separate startup diagnostic, not retroactive timing of the completed replay"
+}

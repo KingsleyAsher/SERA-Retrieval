@@ -1,0 +1,10 @@
+{
+  "passed": 4,
+  "checks": [
+    "prepare_checkpoint_new_engine_reuses_completed_ann_and_scope",
+    "cache_hit_admission_resume_does_not_repeat_lookup",
+    "copied_store_rejects_foreign_checkpoint_save_and_restore",
+    "custom_pool_rejects_wrong_hybrid_label_and_scopes_accounting"
+  ],
+  "scope": "fictitious boundary checks only"
+}

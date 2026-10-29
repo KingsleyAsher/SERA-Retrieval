@@ -1,0 +1,16 @@
+{
+  "passed": 10,
+  "checks": [
+    "compact_and_json_same_entry_payload_and_selection",
+    "full_budget_cold_and_warm_equal_canonical_reference_without_duplicate_scores",
+    "seed_scoring_checkpoint_new_engine_keeps_payload_cursor_and_cost",
+    "frontier_member_cursor_resume_does_not_repeat_coarse_or_seed_work",
+    "canonical_score_resume_does_not_repeat_frontier",
+    "result_cache_hit_keeps_source_and_commit_cost",
+    "empty_filter_completes_without_seed_leak",
+    "empty_seed_bucket_falls_back_within_same_fixed_vector_budget",
+    "unsupported_hard_internal_budget_rejected",
+    "IVF_snapshot_binding_prevents_cross_update_reuse"
+  ],
+  "scope": "fictitious mechanics; no certificates"
+}

@@ -1,0 +1,49 @@
+{
+  "stage": 1,
+  "source_revision": 1216,
+  "files": 114,
+  "chunks": 1213,
+  "dimensions": 1024,
+  "vector_sha256": "9f2b5738cbe844ea7af3d6f14931131887f4dba78523f4bd7ef5b71ea96f3307",
+  "metadata_sha256": "796111463f2b941300e4612595397fc3c3d7315ab1a393fe792a7b16a8bf90a9",
+  "families": 120,
+  "query_variants": 360,
+  "split_counts": {
+    "dev": 72,
+    "calibration": 24,
+    "test": 24
+  },
+  "kind_counts": {
+    "fact": 20,
+    "rewrite": 20,
+    "cross_source": 20,
+    "source_or_time_filter": 20,
+    "no_answer": 20,
+    "after_update": 20
+  },
+  "audit_count": 12,
+  "audit_family_ids": [
+    "F004",
+    "F010",
+    "F031",
+    "F027",
+    "F044",
+    "F046",
+    "F071",
+    "F065",
+    "F087",
+    "F085",
+    "F108",
+    "F110"
+  ],
+  "missing_time_metadata_families": 1,
+  "time_metadata_available_sources": 90,
+  "labels_status": "unreviewed source-grounded seed judgments; not gold",
+  "no_answer_status": "synthetic unique-marker tasks, not established natural no-answer examples",
+  "update_status": "20 scenario definitions only; no mutations performed",
+  "test_status": "24 families isolated, no retrieval results generated",
+  "results_generated": false,
+  "embedding_calls": 0,
+  "stage2_started": false,
+  "timestamp": "2026-10-28T13:26:19.584180+00:00"
+}

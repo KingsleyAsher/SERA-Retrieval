@@ -1,0 +1,18 @@
+{
+  "passed": 12,
+  "checks": [
+    "canonical_tie_order_and_no_strict_claim",
+    "shared_result_cache_still_charges_source_fetch",
+    "ann_and_chinese_hybrid_same_snapshot",
+    "source_date_scope_and_unknown_date_exclusion",
+    "charged_budget_truncation_persist_restore_resume",
+    "checkpoint_cannot_change_query",
+    "atomic_batch_and_idempotent_request_digest",
+    "append_modify_delete_visibility_new_epoch_and_pinned_old_epoch",
+    "invalid_input_snapshot_guarantee_and_native_cap_rejected",
+    "commit_budget_and_empty_filter",
+    "multi_action_budget_no_refund_or_reset",
+    "normal_reopen_revision_catalog_and_sources"
+  ],
+  "scope": "fictitious correctness fixtures; no process fault injection or power-loss validation"
+}

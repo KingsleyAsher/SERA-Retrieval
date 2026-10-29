@@ -1,0 +1,51 @@
+{
+  "module_sha256": "ce251412b456cd156f593d5fc4c42e735c091de8e72a119d444cabf72e4c6a49",
+  "findings": {
+    "P1_prepare_resume_duplicates_completed_work": true,
+    "P2_checkpoint_can_erase_consumed": true,
+    "P3_origin_verification_scope_unspecified": true,
+    "P3_stored_text_edit_undetected": true,
+    "P4_foreign_snapshot_accepted": true,
+    "P4_copied_store_identity_collides": true,
+    "P5_hybrid_contract_mislabels_pool": true
+  },
+  "evidence": {
+    "P1": {
+      "final_kind": "pending",
+      "consumed": {
+        "ann_calls": 1,
+        "ann_distance_evaluations": 4,
+        "ann_visited_members": 3,
+        "cache_lookups": 0,
+        "index_builds": 1,
+        "index_input_vector_bytes": 36,
+        "lexical_build_input_bytes": 39,
+        "lexical_builds": 1,
+        "metadata_checks": 3,
+        "state_commits": 1,
+        "state_payload_bytes": 713
+      }
+    },
+    "P2": {
+      "fresh_ledger_rejected": false
+    },
+    "P3": {
+      "source_verification": {},
+      "persisted_digest_column_present": false
+    },
+    "P5": {
+      "contract": "rrf60_dense50_lex50_v1"
+    }
+  },
+  "expected_after_fix": {
+    "P1_prepare_resume_duplicates_completed_work": false,
+    "P2_checkpoint_can_erase_consumed": false,
+    "P3_origin_verification_scope_unspecified": false,
+    "P3_stored_text_edit_undetected": false,
+    "P4_foreign_snapshot_accepted": false,
+    "P4_copied_store_identity_collides": false,
+    "P5_hybrid_contract_mislabels_pool": false
+  },
+  "all_flips_as_expected": false,
+  "scope": "tiny fictitious SQLite reproductions; no performance or fault-injection claims"
+}

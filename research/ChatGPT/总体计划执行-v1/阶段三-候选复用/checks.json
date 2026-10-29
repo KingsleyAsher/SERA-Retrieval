@@ -1,0 +1,16 @@
+{
+  "passed": 10,
+  "checks": [
+    "selected_entry_and_validation_cursor_survive_checkpoint_new_engine",
+    "score_resume_does_not_repeat_ann_match_or_scores",
+    "empty_cache_fallback_shares_parent_budget_and_terminates",
+    "native_internal_hard_budget_rejected",
+    "scope_bucket_mismatch_cannot_reuse_other_scope",
+    "ordinary_result_cache_keeps_source_and_commit_costs",
+    "own_query_only_bucket_falls_back_instead_of_empty_argmax",
+    "invalid_versions_and_ids_cannot_be_returned_as_seeds",
+    "canonical_reference_and_tie_rule",
+    "new_snapshot_excludes_deleted_and_old_executor_requires_explicit_snapshot"
+  ],
+  "scope": "fictitious mechanics only"
+}

@@ -1,0 +1,77 @@
+{
+  "check_count": 8,
+  "checks": [
+    {
+      "name": "WB_sphere_only_success_example",
+      "sphere": 0.726036467925796,
+      "stat": 0.6917333333333333,
+      "centroid": [
+        0.0,
+        0.0,
+        0.96
+      ],
+      "radius": 0.28,
+      "actual_min_squared": 0.9866666666666667
+    },
+    {
+      "name": "WB_stat_only_success_example",
+      "sphere": 0.0,
+      "stat": 2.0,
+      "centroid": [
+        0.0,
+        0.0
+      ],
+      "radius": 1.0,
+      "actual_min_squared": 2.0
+    },
+    {
+      "name": "WB_nonunit_query_failure_example_is_valid_under_contract_A",
+      "sphere": 0,
+      "stat": 0,
+      "centroid": [
+        0.0,
+        0.0
+      ],
+      "radius": 1.0,
+      "actual_min_squared": 0.6800000000000002
+    },
+    {
+      "name": "DS_partial_partition_cannot_be_marked_completed",
+      "returned": 0.6,
+      "missed": 0.95,
+      "required_state": [
+        "active_partition",
+        "member_cursor",
+        "completed_partitions"
+      ]
+    },
+    {
+      "name": "DS_scope_expansion_requires_bound_coverage_not_just_legal_support",
+      "old_upper": -1.0,
+      "new_max": 1.0
+    },
+    {
+      "name": "DS_transferred_bound_not_always_looser_than_fresh_ball_bound",
+      "delta": 0.2828427124746191,
+      "transferred": -0.31715728752538097,
+      "fresh": -0.19999999999999996,
+      "actual": -0.6,
+      "center_norm": 2.0,
+      "beta": 1.0
+    },
+    {
+      "name": "WB_unit_cosine_mapping_cannot_be_general_FP32_L2_contract",
+      "cosine_x": 1.0,
+      "cosine_y": 0.9922778767136677,
+      "L2_x": 1.0,
+      "L2_y": 0.015625
+    },
+    {
+      "name": "DS_exhaustive_short_scope_can_complete",
+      "K": 10,
+      "eligible": 3,
+      "returned": 3
+    }
+  ],
+  "scope": "constructed arithmetic and literal pseudocode-state examples; not executable backend tests or performance evidence"
+}

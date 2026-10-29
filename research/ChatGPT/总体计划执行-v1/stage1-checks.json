@@ -1,0 +1,10 @@
+{
+  "interval_tie_counterexample": true,
+  "nonorthogonal_residual_counterexample": true,
+  "current_threshold_condition": true,
+  "commit_authority_model": true,
+  "p90_not_hard_budget": true,
+  "incomplete_labels_do_not_become_gold": true,
+  "known_answer_metrics": true,
+  "scope": "small mathematical and metric checks only; no concurrency/crash or system performance claim"
+}

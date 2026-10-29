@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the specific commit and relevant stage report; this is an evolving research prototype."
+title: "SERA: Stateful Execution for Retrieval Architectures"
+type: software
+authors:
+  - name: KingsleyAsher
+repository-code: "https://github.com/KingsleyAsher/SERA-Retrieval"
+url: "https://github.com/KingsleyAsher/SERA-Retrieval"
+date-released: 2026-10-29
+abstract: "Frontier research on sparse activation, state reuse and predictive prefetching for retrieval. Stable overall advantages over strong baselines remain unproven."

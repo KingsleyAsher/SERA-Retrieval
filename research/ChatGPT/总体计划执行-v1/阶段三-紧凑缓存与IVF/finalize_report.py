@@ -1,0 +1,161 @@
+"""Summarize existing stage3.2 data, no reruns or new parameter selection."""
+from pathlib import Path
+import json,hashlib
+
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
+
+def main():
+    r=json.loads((HERE/'results-summary.json').read_text(encoding='utf-8'))
+    private=ROOT/'.private-kb-experiments/plan-v1-stage3-ivf'/r['run']
+    raw=json.loads((private/'raw-results.json').read_text(encoding='utf-8'))
+    assert len(raw['requests'])==10560 and len(raw['prewarm'])==2112 and len(raw['fill'])==1632
+    assert len({(x['rep'],x['trace_index'],x['arm']) for x in raw['requests']})==10560
+    for f,digest in r['code_sha256'].items():assert hashlib.sha256((HERE/f).read_bytes()).hexdigest()==digest
+    assert hashlib.sha256((HERE/'protocol.json').read_bytes()).hexdigest()==r['protocol_sha256']
+    assert all(x['identical_filled_seed_sets'] and x['identical_replay_results'] for x in r['layout_controls'])
+    a={x['label']:x for x in r['aggregate']}
+    rows=['| 布局／路径 | 平均耗时 ms | 匹配 ms | 候选载荷 B | 平均前十重合 | 最差 |',
+          '|---|---:|---:|---:|---:|---:|']
+    for label in ['ann50','json-merge-C50','compact-merge-C50','json-seed-C200','compact-seed-C200']:
+        x=a[label];rows.append(f"| {label} | {x['rewrite_ms']['mean']:.3f} | {x['components_ms']['candidate_match']['mean']:.3f} | {x['peak_candidate_payload']} | {100*x['rewrite_overlap']['mean']:.3f}% | {100*x['rewrite_overlap']['minimum']:.0f}% |")
+    ivftable=['| 配置 | 总向量评分预算（含种子） | 平均前十重合 | 最差 | 耗时 ms |',
+              '|---|---:|---:|---:|---:|']
+    for label in ['ivf16-cold-B128','ivf16-warm-C50-B128','ivf16-cold-B256','ivf16-warm-C200-B256',
+                  'ivf16-warm-C200-B512','ivf64-cold-B256','ivf64-warm-C200-B256','ivf64-cold-B512','ivf64-warm-C50-B512']:
+        x=a[label];ivftable.append(f"| {label} | {x['budget']} | {100*x['rewrite_overlap']['mean']:.3f}% | {100*x['rewrite_overlap']['minimum']:.0f}% | {x['rewrite_ms']['mean']:.3f} |")
+    layout=[]
+    for mode in ['seed','merge']:
+        for C in [10,50,200]:
+            j=a[f'json-{mode}-C{C}'];b=a[f'compact-{mode}-C{C}']
+            layout.append(dict(mode=mode,C=C,foreground_reduction=1-b['rewrite_ms']['mean']/j['rewrite_ms']['mean'],
+                payload_reduction=1-b['peak_candidate_payload']/j['peak_candidate_payload'],
+                match_reduction=1-b['components_ms']['candidate_match']['mean']/j['components_ms']['candidate_match']['mean']))
+    lookup={(x['arm'],x['rep'],x['trace_index']):x for x in raw['requests']}
+    pairs=[]
+    for cfg in r['aggregate']:
+        if cfg['mode']!='ivf-warm':continue
+        cold=f"ivf{cfg['nlist']}-cold-B{cfg['budget']}"
+        warm=[x for x in raw['requests'] if x['arm']==cfg['label'] and x['rep']==0 and x['variant']>0 and not x['repeat']]
+        diffs=[x['overlap']-lookup[(cold,0,x['trace_index'])]['overlap'] for x in warm]
+        pairs.append(dict(warm=cfg['label'],cold=cold,better_queries=sum(d>0 for d in diffs),
+            worse_queries=sum(d<0 for d in diffs),equal_queries=sum(d==0 for d in diffs)))
+    # An actual equal-quality candidate must match every measured rewrite, not only mean.
+    savings=[]
+    for w in r['aggregate']:
+        if w['mode']!='ivf-warm' or not w['quality_gate']:continue
+        for c in r['aggregate']:
+            if c['mode']!='ivf-cold' or c['nlist']!=w['nlist'] or w['budget']>=c['budget']:continue
+            ww=[x for x in raw['requests'] if x['arm']==w['label'] and x['variant']>0 and not x['repeat']]
+            dominated=all(x['overlap']>=lookup[(c['label'],x['rep'],x['trace_index'])]['overlap'] for x in ww)
+            if dominated:
+                cheaper_cold=[]
+                for alt in r['aggregate']:
+                    if alt['mode']!='ivf-cold' or alt['nlist']!=c['nlist'] or alt['budget']>=c['budget']:continue
+                    if all(lookup[(alt['label'],x['rep'],x['trace_index'])]['overlap']>=
+                           lookup[(c['label'],x['rep'],x['trace_index'])]['overlap'] for x in ww):
+                        cheaper_cold.append(alt['label'])
+                savings.append(dict(warm=w['label'],cold=c['label'],vector_reduction=1-w['budget']/c['budget'],
+                                    cold_dominated_by=cheaper_cold))
+    (HERE/'paired-diagnostics.json').write_text(json.dumps(dict(layout=layout,ivf_same_budget=pairs,
+        quality_gate_and_per_query_noninferior_fewer_vector_points=savings,
+        incremental_points_against_cold_work_frontier=[x for x in savings if not x['cold_dominated_by']]),ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    text='''# 阶段三第二部分：紧凑候选缓存与可控 IVF
+
+日期：2026-10-29。执行完成，等待用户审查；不自动进入下一部分。
+
+## 结论
+
+1. **布局优化得到明确验证。** 同一批候选与查询下，紧凑 f64／int64 常驻表示消除了大部分 JSON 解码开销，6 组布局对照的填充种子和全部回放返回结果完全一致。这是工程改进，不是新架构相对强基线的代际提升。
+2. **真实前沿热启动已实现。** 种子先按当前查询评分，分区访问顺序据此改变，扫描时跳过已评分种子。固定总向量预算包含种子，未把额外种子当免费资源；前沿、表内游标、已评分状态可接续。
+3. **机制上出现同预算覆盖改善，但尚无超过冷启动质量／工作前沿的少访问结论。** 部分低预算下平均向量前十重合明显提高，个别查询仍较差。热启动 512 可比全扫描式冷启动 1213 少评分，但冷启动 512 同样达到该质量；固定矩阵中尚无因此可归给热启动的额外向量节省。
+4. **相对成熟 ANN 的稳定净收益仍未证实。** 紧凑合并 C50 的汇总均值约 4.006 ms，ANN50 约 4.168 ms，汇总差约 3.9%；前两轮合并稍慢，第三轮 ANN 出现较大耗时，因此不能声称可重复加速。候选填充与维护成本还在。
+
+没有达到新机制相对强基线主要成本降低 20% 且质量保持的挑战目标；没有正式语义质量、严格认证、原创性或领先结论。按冻结协议停止扩展参数，保留当前配置和原始结果。
+
+## 研究分工与执行范围
+
+用户已将另外两个模型的成果审阅分配给分支会话。本会话继续实现、实验和集成；本轮没有重复审阅新的外部稿件，也未向其他会话发消息。后续以分支会话交付的来源、前提、反例和实验需求摘要作为集成输入，仍须对接口及证据核对。
+
+本部分使用相同的 1,213 实际片段、修订 1216、BGE-M3 dense1024 和已有查询嵌入缓存。没有新增 API 调用、专家模型训练、资料扩容或生产路径替换。语义标签仍 unreviewed。
+
+## 固定协议与工作量
+
+- 44 个配置：ANN／full 两个参考；JSON／compact 两种布局下 seed／merge 各 C=10／50／200；16／64 分区的冷启动和种子引导，向量预算 128／256／512／1213（C≤预算）。
+- 10,560 个测量请求、2,112 个普通锚点预热请求、1,632 个完整候选填充请求，共 14,304 个检索请求；候选写入 1,632 次另记。
+- 依旧只有 16 个已有开发查询族、48 个不同查询，其中 32 个改写。三次回放不当成新增独立样本，不使用封存测试族调参。
+- 下表取每次首次出现的改写请求，共 96 次观测；重合率比较完整规范 f64 向量评分结果，不是语义准确率。
+- 普通 LRU 仍为 32 项／4 MiB；每臂命中均为 123/240（51.25%），其中包含刻意安排的紧邻重复，不能推断自然命中率。
+- 通过门槛仍为改写最小重合与 P10 均≥90%；这个门槛不等于已经匹配 ANN 的 100% 向量重合，更不等于语义非劣。
+
+## 布局对照
+
+'''+ '\n'.join(rows)+'''
+
+合并 C50 从 JSON 7.517 ms 降到 compact 4.006 ms（约 46.7%），匹配从约 3.217 ms 降到 0.100 ms（约 96.9%），候选载荷从 359,716 B 降到 147,846 B（约 58.9%）。三个回放轮次均有布局收益，且返回结果相同。
+
+compact 仍按整个候选库读取／复制二进制载荷，没有免费知道应选哪个条目。矩阵构造和种子复制属于查询成本。载荷不含 Python 对象、分配器和瞬时副本峰值；两维简单数字夹具中二进制不一定更小，不能从本轮 1024 维结果推广到所有数据。
+
+只用旧 C200 的质量仍是平均 96.25%、最差 70%。布局变快没有修复漏检。合并路径也仍执行完整 ANN，不能把布局收益算作 ANN 搜索访问减少。
+
+## 可控 IVF 的热启动对照
+
+'''+ '\n'.join(ivftable)+'''
+
+16 分区、预算 256 下，C200 引导使平均重合由 84.375% 提到 97.8125%（增加 13.4375 个百分点），最差由 50% 提到 80%；仍不达门槛，耗时也由约 3.965 ms 增到 4.491 ms。种子 200 次评分和新扫描 56 次合计仍是 256，不能称已减少向量访问。
+
+16 分区、预算 512 的 C200 引导达到平均 99.6875%、最差 90%，通过研究门槛；64 分区的冷启动在相同 512 预算已达到每条改写 100%，且平均约 5.007 ms，低于上述热启动约 5.198 ms。不同分区不是缓存因果消融，但这是必须报告的可用强配置，不能只挑较弱的 16 分区基线宣称少访问。
+
+64 分区、预算 512 下，C50 引导与冷启动均 100%；耗时约 5.001 对 5.007 ms，差异约千分之一且轮次方向不一致，没有可靠净收益。全部 IVF 路径的停止规则相同：总向量预算用尽或合法向量遍历完毕；本轮没有几何界或概率提前停止。
+
+若只比较 64 分区热启动 B512 和冷启动 B1213，可以算出少评分约 57.8%、相同前十结果。但 B1213 已被同样 100% 的冷启动 B512 支配，所以这不能作为热启动收益。配对诊断保留了这些原始比较及更强冷启动点，不删除有利数字，也不采用弱基线归因。
+
+逐查询同预算变好／变差计数及严格质量配对见 `paired-diagnostics.json`，完整 44 点见 `results-summary.json`。预算较小时，种子可能消耗本应给新分区的额度，某些查询变差；不能只看平均值。较少 posting 检查也不等于较少向量访问：种子有随机向量读取，全部计入 canonical_scores 和 vector_logical_bytes。
+
+## 初始化、资源和时延限制
+
+IVF16／64 的实际共同构建约 107.5／113.2 ms，常驻数组载荷 150,480／543,696 B（不含公共向量）。16 块大小 35—112，64 块大小 3—56，说明等表长估计不能直接当真实访问量。构建实例对所有同配置查询臂共享，单独报告，不重复伪造为每臂实际构建。
+
+普通锚点预热对所有非 full 臂用 ANN；每臂相关初始化计费，并保留该 ANN 索引。IVF 实验还保留用于预热和填充的 ANN 内存，因此当前进程总内存不能冒称纯 IVF 最小内存。候选填充是实际 K=C 请求，包含来源和提交，未省略。
+
+三个回放累计工作流中，ANN50 约 1,450.7 ms；compact merge C50 约 1,703.7 ms；JSON merge C50 约 2,171.0 ms。布局优化降低了原型总成本，但 compact 合并加上填充后仍比 ANN 工作流更贵。IVF64 cold B512 约 1,489.7 ms，warm C50 B512 约 1,884.3 ms；这两数均不含单独列出的共同 IVF 构建。
+
+时延有约 15 ms 或更大的离群值，P50／P95、逐轮均值和原始分布均保留；不承诺稳定 P99。提交／序列化是参考执行政策的较大成本，不是所有生产系统的固有下界。prepare 内含匹配、粗评分和前沿子项，不能再将子项重复相加。原生 ANN 的 f32 距离计数与 f64 规范评分不是同一操作，不能直接按次数相加。
+
+公共输入读取、隔离库导入、快照物化和现有查询嵌入缓存读取见 summary 的 common_initialization。没有测量无缓存云端嵌入耗时；物理 IO、WAL 放大、RSS、并发和故障恢复未覆盖。
+
+表内工作流计时从 Python 依赖已导入后开始，不包含原回放进程的解释器／首次库导入。另做一次新进程启动测量，见 startup-probe.json，明确区分执行器和 sklearn 导入及子进程总墙钟；OS 缓存未清除，不能当生产冷启动保证，也不回填为原回放已实测耗时。因此这里的总账覆盖就绪运行时工作流及单列准备项，不声称完整冷进程／冷盘端到端成本。
+
+## 正确性简查与复现
+
+10 项虚构检查通过：两种布局选择等价；全预算冷／热 IVF 等于完整规范参考且不重复评分；种子评分／前沿／规范计分中断后接续；缓存命中仍校验来源并提交；空过滤无泄漏；空种子桶在同预算回退；不支持的内部硬预算拒绝；IVF 与快照绑定。
+
+实际回放逐请求检查预算、来源和提交；完成后核对请求数、配对键唯一性、冻结协议与执行代码哈希。6 组布局的填充候选与全部结果一致。旧两阶段原型及结果不覆盖，真实原始记录留在私有实验区。
+
+复现使用原有 Python 环境运行本目录 checks.py、run_experiment.py；新执行会创建新 run 目录，缓存缺失直接失败，不自动调用 API。finalize_report.py 只汇总既有结果。机器环境：Python 3.13、NumPy 2.5.4、scikit-learn 1.9.1、USearch 2.26.6。
+
+## 后续建议，尚未执行
+
+紧凑缓存作为公共工程能力保留，供所有路径使用；旧 JSON 只作反事实对照。候选合并和固定种子引导保持可选研究路径，不替换日常检索。
+
+下一步应分析已固定分区上的困难查询和块界紧度，验证能否形成有支持的请求级停止／回退条件，避免固定预算下的长尾漏检；不继续扩大这 16 个开发族上的参数网格。需同时保留成熟 ANN、同布局冷 IVF 和完整评分。外部分支的理论修订交接回来后，再决定哪些界或策略进入下一份有限协议；仍不恢复专家模型训练。
+
+本部分结束，等待用户确认后再开启下一部分。
+'''
+    (HERE/'阶段三第二部分报告.md').write_text(text,encoding='utf-8')
+    sfile=HERE.parent/'执行状态.json';s=json.loads(sfile.read_text(encoding='utf-8'))
+    s.update(stage3_delivery='part2_ready_for_review',stage3_part2_completed=True,stage3_part2_run=r['run'],
+        stage3_part2_main_requests=10560,stage3_part2_total_search_requests=14304,stage3_part2_correctness_checks=10,
+        stage3_part2_outcome='layout_improvement_and_some_same_budget_coverage_gain_no_strong_baseline_net_advantage',
+        stage3_part3_started=False,user_confirmation_required_for_stage3_part3=True,
+        external_review_owner='user_forked_review_conversation')
+    sfile.write_text(json.dumps(s,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    manifest=dict(stage='3.2',status='ready_for_review',run=r['run'],protocol_sha256=r['protocol_sha256'],
+        code_sha256=r['code_sha256'],private_raw=str(private/'raw-results.json'),
+        public_files=['protocol.json','execution_engine.py','layouts.py','checks.py','checks.json','run_experiment.py',
+            'finalize_report.py','results-summary.json','paired-diagnostics.json','阶段三第二部分报告.md','实现说明.md'],
+        main_requests=10560,total_search_requests=14304,new_api_calls=0,part3_started=False,external_review_in_user_fork=True)
+    (HERE/'交付清单.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    print(json.dumps(dict(part='3.2',requests=14304,layout_controls_passed=6,equal_quality_fewer_vector_points=savings,
+                         report=str(HERE/'阶段三第二部分报告.md'),next_part_started=False),ensure_ascii=False,indent=2))
+
+if __name__=='__main__':main()
