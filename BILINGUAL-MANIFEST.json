@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-29",
+  "writing_policy": "independently_authored_zh_and_en_from_shared_evidence",
+  "perspective": "project_owner",
+  "pairs": [
+    {
+      "en": "ROADMAP.md",
+      "zh": "ROADMAP.zh-CN.md"
+    },
+    {
+      "en": "docs/ARCHITECTURE.md",
+      "zh": "docs/ARCHITECTURE.zh-CN.md"
+    },
+    {
+      "en": "docs/RESULTS.md",
+      "zh": "docs/RESULTS.zh-CN.md"
+    },
+    {
+      "en": "docs/REPRODUCIBILITY.md",
+      "zh": "docs/REPRODUCIBILITY.zh-CN.md"
+    },
+    {
+      "en": "docs/PUBLICATION.md",
+      "zh": "docs/PUBLICATION.zh-CN.md"
+    },
+    {
+      "en": "CONTRIBUTING.md",
+      "zh": "CONTRIBUTING.zh-CN.md"
+    },
+    {
+      "en": "CHANGELOG.md",
+      "zh": "CHANGELOG.zh-CN.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/执行总纲.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/执行总纲.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段一-基准数据卡.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段一-基准数据卡.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段一报告.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段一报告.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段一-方案修正清单.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段一-方案修正清单.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/外部方案第二轮审阅.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/外部方案第二轮审阅.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/外部方案第三轮审阅.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/外部方案第三轮审阅.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/外部方案第四轮审阅与规格收敛.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/外部方案第四轮审阅与规格收敛.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段二后交付审阅-2026-10-29.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段二后交付审阅-2026-10-29.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三首部分协议采纳补丁-2026-10-29.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三首部分协议采纳补丁-2026-10-29.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段二/阶段二报告.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段二/阶段二报告.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段二/接口与复现说明.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段二/接口与复现说明.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/阶段三首部分报告.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/阶段三首部分报告.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/阶段三第二部分报告.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/阶段三第二部分报告.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/实现说明.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/实现说明.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/下一部分协议.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/下一部分协议.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/采纳回执.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/采纳回执.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/修订验收与主会话交接-2026-10-29/主会话交接.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/修订验收与主会话交接-2026-10-29/主会话交接.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/审阅报告.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/审阅报告.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/历史口径/执行总纲-状态对齐前-2026-10-29.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/历史口径/执行总纲-状态对齐前-2026-10-29.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/给DeepSeek-热启动有限修订提示词.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/给DeepSeek-热启动有限修订提示词.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/给WorkBuddy-组合界诊断提示词.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/给WorkBuddy-组合界诊断提示词.md"
+    },
+    {
+      "en": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/定点反馈与转交提示词.en.md",
+      "zh": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/定点反馈与转交提示词.md"
+    },
+    {
+      "en": "research/WorkBuddy/独立审阅/02-组合界有限修订与诊断协议-2026-10-29.en.md",
+      "zh": "research/WorkBuddy/独立审阅/02-组合界有限修订与诊断协议-2026-10-29.md"
+    },
+    {
+      "en": "research/DeepSeek/本地Agent交付/06-热启动候选有限修订-2026-10-29.en.md",
+      "zh": "research/DeepSeek/本地Agent交付/06-热启动候选有限修订-2026-10-29.md"
+    },
+    {
+      "en": "README.md",
+      "zh": "README.zh-CN.md"
+    },
+    {
+      "en": "docs/LANGUAGES.md",
+      "zh": "docs/LANGUAGES.zh-CN.md"
+    },
+    {
+      "en": "docs/LICENSING.md",
+      "zh": "docs/LICENSING.zh-CN.md"
+    },
+    {
+      "en": "docs/CITATION.md",
+      "zh": "docs/CITATION.zh-CN.md"
+    },
+    {
+      "en": "NOTICE.en.md",
+      "zh": "NOTICE.zh-CN.md"
+    },
+    {
+      "en": "AGENTS.md",
+      "zh": "AGENTS.zh-CN.md"
+    },
+    {
+      "en": "docs/INDEX.md",
+      "zh": "docs/INDEX.zh-CN.md"
+    },
+    {
+      "en": "docs/ARTIFACTS.md",
+      "zh": "docs/ARTIFACTS.zh-CN.md"
+    }
+  ],
+  "shared_artifacts": [
+    ".gitignore",
+    "BILINGUAL-MANIFEST.json",
+    "CITATION.cff",
+    "docs/PUBLICATION-CHECKS.json",
+    "LICENSE",
+    "NOTICE",
+    "PUBLICATION-MANIFEST.json",
+    "requirements.txt",
+    "research/ChatGPT/总体计划执行-v1/quality_metrics.py",
+    "research/ChatGPT/总体计划执行-v1/stage1-checks.json",
+    "research/ChatGPT/总体计划执行-v1/stage1-summary.json",
+    "research/ChatGPT/总体计划执行-v1/stage1_protocol.json",
+    "research/ChatGPT/总体计划执行-v1/修订验收与主会话交接-2026-10-29/check_review.py",
+    "research/ChatGPT/总体计划执行-v1/修订验收与主会话交接-2026-10-29/checks.json",
+    "research/ChatGPT/总体计划执行-v1/执行状态.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/candidate_engine.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/check_candidate_engine.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/checks.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/finalize_report.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/protocol.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/results-summary.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/run_ablation.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/protocol.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/checks.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/checks.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/execution_engine.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/finalize_report.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/layouts.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/measure_startup.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/paired-diagnostics.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/protocol.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/results-summary.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/run_experiment.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/startup-probe.json",
+    "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/check_math.py",
+    "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/math-checks.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/check_framework.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/check_review_boundaries.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/checks.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/finalize_report.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/framework.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/inspect_inputs.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/results-summary.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/review_fix_probes.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/run_stage2.py",
+    "research/ChatGPT/总体计划执行-v1/阶段二/stage2_protocol.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/独立审阅修复/after.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/独立审阅修复/before.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/独立审阅修复/boundary-checks.json",
+    "research/ChatGPT/总体计划执行-v1/阶段二/独立审阅修复/framework-before-ce251412.py"
+  ],
+  "official_license": "LICENSE",
+  "license_explanation": [
+    "docs/LICENSING.md",
+    "docs/LICENSING.zh-CN.md"
+  ]
+}

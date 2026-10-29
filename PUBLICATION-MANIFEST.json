@@ -55,7 +55,8 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段二/接口与复现说明.md",
       "source_sha256": "b51221872cfdcb335e549ec3b569673d746491f47d25cd6df186dfc4e6cd89b0",
-      "published_sha256": "b5d1d5d46c2b451844216712dd1db26d7eb302abfdd0c692c0bf73e05c9e3fc2"
+      "published_sha256": "670df8f6a70808ed58f19daebe5982a01e01abb92009e9750ebdb09a41856afd",
+      "initial_publication_sha256": "b5d1d5d46c2b451844216712dd1db26d7eb302abfdd0c692c0bf73e05c9e3fc2"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段二/独立审阅修复/after.json",
@@ -80,7 +81,8 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段二/阶段二报告.md",
       "source_sha256": "cee495be9262afb96ebef39bd0c8b88310589fb3069d67411a704cf6c60ad4de",
-      "published_sha256": "e05bf62b488d298c0b506594f58110bbedbbe91a66965920305bbd82b2b8972b"
+      "published_sha256": "e00a76c5febdff4ea1ac44812c55af4386d230179d4d19435cf83027e3245500",
+      "initial_publication_sha256": "e05bf62b488d298c0b506594f58110bbedbbe91a66965920305bbd82b2b8972b"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/candidate_engine.py",
@@ -120,17 +122,20 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/给DeepSeek-热启动有限修订提示词.md",
       "source_sha256": "f954fca24dce0bfed07b544bdda26e5f9b284141d69a05fbfa7a82aa86a2cfc9",
-      "published_sha256": "db8db0662e4e76603bf6ceb6c7ec656fd595bd57f31ea8d2b49a3cc67fc80fe2"
+      "published_sha256": "1a0c4f7528c683cd1d3e64bc9da392c101d498772a2999293c2b21fadf4f3876",
+      "initial_publication_sha256": "db8db0662e4e76603bf6ceb6c7ec656fd595bd57f31ea8d2b49a3cc67fc80fe2"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/给WorkBuddy-组合界诊断提示词.md",
       "source_sha256": "27f93f39d0098e82077abd942facdfb37622e14e4a1cea77f79cca8a88771714",
-      "published_sha256": "cb9cc7f92518e052c6162c75ae554cc4484c2abe223c4a7a32725f0dcbdb60de"
+      "published_sha256": "cff6277dc27de6597426908643acd1fb7d7f05b825b2f7b1c793e3df27c164b0",
+      "initial_publication_sha256": "cb9cc7f92518e052c6162c75ae554cc4484c2abe223c4a7a32725f0dcbdb60de"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-候选复用/阶段三首部分报告.md",
       "source_sha256": "9bcde82705deb1db5877506f2ff8cfdf4b37108c40176b25efe73a6aeae0de12",
-      "published_sha256": "2aa8cc0639e01c05eb9853dec64bcdb4be2e5976e09ab290a4428bd3b2e7fb8a"
+      "published_sha256": "f9b07f1758248738aa509b6e5c2ca95266fa2da168b30f0af90f6a35046650c7",
+      "initial_publication_sha256": "2aa8cc0639e01c05eb9853dec64bcdb4be2e5976e09ab290a4428bd3b2e7fb8a"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/checks.json",
@@ -190,12 +195,14 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/实现说明.md",
       "source_sha256": "a09354b6c3de7ada0e34ec16ca97f39d428758823cff67448764ff0a9f743894",
-      "published_sha256": "9838bf2f000c8c1ffc9da022f6a79f296e2de994969102285c02db4d9d89e31b"
+      "published_sha256": "d4ff00b67ff2e6270d56e8ea89526ebf473e163d01d16a8cf93ec1900b823f38",
+      "initial_publication_sha256": "9838bf2f000c8c1ffc9da022f6a79f296e2de994969102285c02db4d9d89e31b"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/阶段三第二部分报告.md",
       "source_sha256": "11e4cf744ce299b5a9e7335038d8f4621c19c169119aec4061f6f13657c4b1db",
-      "published_sha256": "769687fb32654f3c26c7e007bd4a03f0523387577b3bca394b1357a172199b6a"
+      "published_sha256": "6cefb5d5ce77e9392d3eba60aec33c438010ffa9cf6e42bb1e47b6a634e3ca59",
+      "initial_publication_sha256": "769687fb32654f3c26c7e007bd4a03f0523387577b3bca394b1357a172199b6a"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/protocol.json",
@@ -205,12 +212,14 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/下一部分协议.md",
       "source_sha256": "3abe47c0ec113f56a81fec395c1d950a14bf20791805b3a7490d87ec669fde7d",
-      "published_sha256": "ebdcdb55833874e08015473d245ca4e65a44ae41321b7f77ca96746c38a06a31"
+      "published_sha256": "80a1c745c74b50ae8bf629e049a496875edbb66ecccdc18ff67006dde02fe47f",
+      "initial_publication_sha256": "ebdcdb55833874e08015473d245ca4e65a44ae41321b7f77ca96746c38a06a31"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/采纳回执.md",
       "source_sha256": "a1e2aba502d9d313aee6096b85a0dd5c370000cf82601ae4bc711f9c18a611d0",
-      "published_sha256": "5e0cc0a64594b8bf1c1463780a5e9d4635a6546f3c8fc7160ad1e2c1c87e3a07"
+      "published_sha256": "680e35c4e52757ef4a1323df80708e0893ee480694b2aff07a711ff65a52acc4",
+      "initial_publication_sha256": "5e0cc0a64594b8bf1c1463780a5e9d4635a6546f3c8fc7160ad1e2c1c87e3a07"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/check_math.py",
@@ -225,12 +234,14 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/定点反馈与转交提示词.md",
       "source_sha256": "1f3e848940d5a1fa027b1e5790711b831baad3a492c0b54fbbbaebf269812b95",
-      "published_sha256": "5b62b4c28b43f563b2d665d3491fe85c4573377e917491ae68f94ec2f4cd3e49"
+      "published_sha256": "2206cfd1a6339b63b25250a2987e6cd50a20eb4b1f71f1b1f7632e7655e4aaec",
+      "initial_publication_sha256": "5b62b4c28b43f563b2d665d3491fe85c4573377e917491ae68f94ec2f4cd3e49"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三后方案审阅-2026-10-29/审阅报告.md",
       "source_sha256": "46f5c1fc187848b20c508c3d51d1a2b7e4ffc9686a620925b2b2044fdfcda0b3",
-      "published_sha256": "0d4bbab45c6b051141ee9263f784ce591578d2e7999b10c02e1331abc008ffd0"
+      "published_sha256": "e52f8c60991a031dffb1d09e90aecd4bc600eca30769c7cb8bf4b3712f1a16be",
+      "initial_publication_sha256": "0d4bbab45c6b051141ee9263f784ce591578d2e7999b10c02e1331abc008ffd0"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/修订验收与主会话交接-2026-10-29/check_review.py",
@@ -245,12 +256,14 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/修订验收与主会话交接-2026-10-29/主会话交接.md",
       "source_sha256": "f977d54ad7ee708421ecb6d375e776c5f83515aa06de9426d011a1363a818d56",
-      "published_sha256": "e4e876ae2e9dd2b35ed02ae4f7a71a2c95681a5fa2bc8aad3aaa8cb03362f1a6"
+      "published_sha256": "f8377fbf95181b5c92dd39bf2533f709930a0eb8ca9e380514ea736a481cbc87",
+      "initial_publication_sha256": "e4e876ae2e9dd2b35ed02ae4f7a71a2c95681a5fa2bc8aad3aaa8cb03362f1a6"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/执行总纲.md",
       "source_sha256": "153e55f73127531cd782562f98cc042b99d29ad9801081161fb40ec502735e66",
-      "published_sha256": "e0f2434f4a614618c16e93660c43b9a85190ed19f1f959373ef2bdc8cc2b688e"
+      "published_sha256": "a63c5201c1b7dad843f0e31c5709b4981a3947fe574925e63c1cb7023e69ec34",
+      "initial_publication_sha256": "e0f2434f4a614618c16e93660c43b9a85190ed19f1f959373ef2bdc8cc2b688e"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/执行状态.json",
@@ -260,17 +273,20 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段一报告.md",
       "source_sha256": "4a71c80e7ed346a482db4f5ac4d721ea9771678cd13010d9e26e180f034a363d",
-      "published_sha256": "af58e133e6408ceaa9e27eb600706512d1c218963e19bce264eb1c108275c098"
+      "published_sha256": "9b834fd4697e83396f6782e4c54c05162d639e6959fbfd8cd3ad983f10816058",
+      "initial_publication_sha256": "af58e133e6408ceaa9e27eb600706512d1c218963e19bce264eb1c108275c098"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段一-方案修正清单.md",
       "source_sha256": "51fabc28709d9e85654d10a14a844ddc46fbdd5ef94c96f0377506124df38961",
-      "published_sha256": "d220f2d7080c58892229141e90041164bb7e12a04e0365db646ac712d2cb74c3"
+      "published_sha256": "20c5a8a4d1e717cdf7dd8ebb95963246a199736c3647128d392eae16050e7e6d",
+      "initial_publication_sha256": "d220f2d7080c58892229141e90041164bb7e12a04e0365db646ac712d2cb74c3"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段一-基准数据卡.md",
       "source_sha256": "b60516917a45cf9e19bb9b4a9add6491242f8cf2db85f2d535b5c88e81ffd1ff",
-      "published_sha256": "3e1f2e52b719797e49a041a7e3ef5481bd61e7ec46965eee9ab9b0ae6bb7cfe4"
+      "published_sha256": "386d5358d0efa1137987fe7b2a92d41f5c0b55e2ac7c07e628c3e3ce8f09e57a",
+      "initial_publication_sha256": "3e1f2e52b719797e49a041a7e3ef5481bd61e7ec46965eee9ab9b0ae6bb7cfe4"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/stage1_protocol.json",
@@ -295,42 +311,51 @@
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段二后交付审阅-2026-10-29.md",
       "source_sha256": "99cfc4d2e4af649e3427b654fc7e5cd5761ebf77ad70ff0980a7d9cf189e9ca4",
-      "published_sha256": "0d4fcdc9e8e58eeebb5c82c745f80a0dd64e5d861db98fd3ae58a53ac615058c"
+      "published_sha256": "683a644a36d94e8e39e7ef95460210e0acf5ee60d2e4279436df00ddb5fa40fa",
+      "initial_publication_sha256": "0d4fcdc9e8e58eeebb5c82c745f80a0dd64e5d861db98fd3ae58a53ac615058c"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/阶段三首部分协议采纳补丁-2026-10-29.md",
       "source_sha256": "c9e07086ff3da3509ce2dd78a616902195f7f9247a0cd43535d41c890a38ef80",
-      "published_sha256": "ef50ae3ed9df6e2a656bae795983dc79b93e643b6b886d0c46d42927437d1c35"
+      "published_sha256": "11ab82237b95978ae9346a676416f3c20c24a07aaa110313b9e6114d1e4e6762",
+      "initial_publication_sha256": "ef50ae3ed9df6e2a656bae795983dc79b93e643b6b886d0c46d42927437d1c35"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/外部方案第二轮审阅.md",
       "source_sha256": "a3bebe642e611b2f9c0cbd61166e0718517ee4eaa3b94a8a110c99d92061ae26",
-      "published_sha256": "25acb01a90e38a3b75f110e16a1809b4c580b55a0c15007040353cec8a94a676"
+      "published_sha256": "b3d53f6e7ce5499de1739ab75e6b7e45bfb42f26d8c900db14936efb98478403",
+      "initial_publication_sha256": "25acb01a90e38a3b75f110e16a1809b4c580b55a0c15007040353cec8a94a676"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/外部方案第三轮审阅.md",
       "source_sha256": "d7f1ae9aca14d2d1edd7e3ae3892532b1445aec6c121f21f6bf2f534de682bb4",
-      "published_sha256": "8a561acf9a2ba32fcabe5f6959a3f465c190ef8e8420b9284d782be6be15a372"
+      "published_sha256": "079d4ed1234e3b075b53c843a37126a55410ce4d0fb8ee285e7e31f761cd508b",
+      "initial_publication_sha256": "8a561acf9a2ba32fcabe5f6959a3f465c190ef8e8420b9284d782be6be15a372"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/外部方案第四轮审阅与规格收敛.md",
       "source_sha256": "29aff2cc9116b52de3dc2f3a1efc1a9dc50f8c8a2aacb62d6d4760fb9ae04928",
-      "published_sha256": "140ab5fc7e546189366bca61fed06df8d5eaa3523c257a9df7627d5a95e30959"
+      "published_sha256": "c87dec98411ae3240a1db85a7c30d140ce539f1d79028f6cc78d11e7cfd79896",
+      "initial_publication_sha256": "140ab5fc7e546189366bca61fed06df8d5eaa3523c257a9df7627d5a95e30959"
     },
     {
       "path": "research/ChatGPT/总体计划执行-v1/历史口径/执行总纲-状态对齐前-2026-10-29.md",
       "source_sha256": "665f663b33a45931457ca78cc095ff26150db442339367e4655e59578fe69ba2",
-      "published_sha256": "5f75a08364879aaf8e99918e89b971ecb29938b2a9106c1faa75c2e22f57ae90"
+      "published_sha256": "76ef45261880564d7f6548dc2a46e28fde37ffeb628267241435e01610eff449",
+      "initial_publication_sha256": "5f75a08364879aaf8e99918e89b971ecb29938b2a9106c1faa75c2e22f57ae90"
     },
     {
       "path": "research/WorkBuddy/独立审阅/02-组合界有限修订与诊断协议-2026-10-29.md",
       "source_sha256": "f07ed7e4e255ee04a51f620a8dc32722574ae918cbfe870fa466197c97a1fa90",
-      "published_sha256": "f0d780b3d18b3e904b1695f3c34599205ca6733cd332194e89b455f7833830eb"
+      "published_sha256": "314744b7f7c088cb217ff5a3a7cfee51fd8fe24d62a24dd132e0a35f0d15df45",
+      "initial_publication_sha256": "f0d780b3d18b3e904b1695f3c34599205ca6733cd332194e89b455f7833830eb"
     },
     {
       "path": "research/DeepSeek/本地Agent交付/06-热启动候选有限修订-2026-10-29.md",
       "source_sha256": "37d98d46d63fcf71232bb054a84347b76a58bdd13ecf19fca4760215a7a6897a",
-      "published_sha256": "995df5f52c94c8b261674916b18d30fda46bd4ebdf7a638c5f08236592cd0d49"
+      "published_sha256": "fbd5c2ec5e1ea008e09e174feb8ab6cbaf4531a8606ad489731b333fc13f3763",
+      "initial_publication_sha256": "995df5f52c94c8b261674916b18d30fda46bd4ebdf7a638c5f08236592cd0d49"
     }
-  ]
+  ],
+  "editorial_update": "2026-10-29: owner-perspective prose and independently authored English editions; code/data unchanged"
 }

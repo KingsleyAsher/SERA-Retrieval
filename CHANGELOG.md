@@ -1,10 +1,11 @@
 # Changelog
 
-## 2026-10-29 — Initial public research archive
+[English](CHANGELOG.md) | [简体中文](CHANGELOG.zh-CN.md)
 
-- Added bilingual project overview, roadmap, architecture and evidence boundaries.
-- Archived stage-2 executor and repairs, stage-3.1 candidate reuse, stage-3.2 compact layout / controllable IVF, and the unimplemented stage-3.3 protocol.
-- Preserved negative results, same-budget comparisons and strong-baseline limitations.
-- Added Python dependency pins, reproduction notes, private-data exclusions and source/publication hashes.
-- Publication preparation does not start a new research phase. No expert training, private-data upload or benchmark rerun.
-- Subsequently selected Apache-2.0 for original project code and documentation with owner authorization; third-party terms remain separate.
+## 2026-10-29 — Bilingual research documentation
+
+I added separately authored Chinese and English editions for the project guides and research archive, together with language navigation and artifact-reading guides. The writing uses my project perspective. Code and canonical data are unchanged. This documentation work does not start stage 3.3 or produce new experimental evidence.
+
+## 2026-10-29 — Initial public archive
+
+I published the execution plan, stage-2 framework and repairs, stage-3.1 reuse experiments, stage-3.2 compact layout and controllable IVF, and the proposed stage-3.3 protocol. The archive retains negative results and strong-baseline limitations. Private inputs and credentials remain excluded. I selected Apache-2.0 for original project code and documentation; third-party terms remain separate.

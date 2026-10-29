@@ -1,9 +1,11 @@
-# Contributing / 研究协作
+# Contributing to SERA
 
-Original project code and documentation use Apache-2.0. Contributions intended for integration should be submitted under the same license unless explicitly agreed otherwise; disclose third-party material and its terms.
+[English](CONTRIBUTING.md) | [简体中文](CONTRIBUTING.zh-CN.md)
 
-For research feedback, identify the commit, protocol and scoring contract; supply a minimal counterexample or a same-budget, same-quality comparison. Distinguish observations from conjectures and do not substitute vector overlap for semantic relevance. Include setup, maintenance, seed work and fallbacks in cost claims.
+I welcome reproducible counterexamples, clearly specified experiments and proposals that address a demonstrated bottleneck. Identify the commit, snapshot, scoring contract and budget before comparing results. Report setup, seed acquisition, maintenance, source access and fallback costs as well as foreground latency.
 
-Never submit private documents, private query traces, credentials or unapproved datasets in issues, pull requests or logs. Use fictitious fixtures for counterexamples. Changes to acceptance criteria must be explicit. Major research stages require review before implementation continues.
+Separate measured observations, mathematical conditions and conjectures. Vector top-K overlap is not semantic relevance. A change to acceptance criteria must be explicit, and a failed experiment must not disappear when the approach changes.
 
-中文：欢迎针对指定提交、协议与评分契约提出最小反例或公平对照。请明确实测、推测与未知，保留失败结果；不要上传私人资料或凭据。项目原创内容采用 Apache-2.0；拟整合的贡献默认沿用相同许可，第三方材料须明确来源及许可。
+Use fictitious fixtures when reporting bugs. Do not upload private documents, query traces, credentials or datasets without distribution rights. New research directions and integration changes should be discussed before large implementations are submitted.
+
+Original project code and documentation use Apache-2.0. Contributions intended for inclusion should use the same license unless I explicitly agree otherwise. Identify third-party material and its license. Model assistance should be disclosed where relevant to provenance; it does not substitute for verification.

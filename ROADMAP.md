@@ -1,20 +1,25 @@
-# Research roadmap / 总体路线
+# Research roadmap
 
-Five objectives: semantic quality, latency, resource efficiency, update freshness, stability.
-Core hypothesis: shared execution state, dependency invalidation and a common resource ledger can avoid repeated work beyond isolated components.
+[English](ROADMAP.md) | [简体中文](ROADMAP.zh-CN.md)
 
-| Stage | Scope | Status |
+I am developing SERA to investigate a new retrieval architecture rather than optimize one isolated metric. The intended benefits are relevant results, faster responses, lower resource use, fresh results after updates, and predictable operation under load.
+
+My working hypothesis is that candidate reuse, sparse activation, update repair and predictive work can share execution state, dependency tracking and one resource ledger. I will compare that design with mature systems equipped with the same ordinary caches, data layout and update capabilities.
+
+| Stage | Research question | Current position |
 |---|---|---|
-| 1 | Frozen corpus, proposal corrections, 120 query families and relevance review | Technical preparation done; labels unreviewed |
-| 2 | Shared executor, snapshots, budget ledger, full / ANN / hybrid baselines | Delivered with correctness repairs |
-| 3.1 | Cache-only and candidate-merge ablations | Done; no strong-baseline net benefit |
-| 3.2 | Compact layout and controllable seed-guided IVF | Done; layout improvement and local coverage signal |
-| 3.3 | Partial-partition continuation, atomic seed accounting, offline bound diagnosis | Protocol only; not started |
-| Remaining 3 | Sparse execution, independent CPU calibration, budgeted prefetch | Pending |
-| 4 | Independent strict certification branch | Theory preparation; implementation pending |
-| 5 | Joint framework versus equally equipped strong baselines | Pending |
-| 6 | Real deduplicated scale-up, recovery, concurrent updates, shadow use | Pending |
+| 1 | Can I freeze a credible quality/cost benchmark and resolve proposal errors? | Technical preparation complete; semantic labels still unreviewed |
+| 2 | Can multiple backends share requests, snapshots, actions and budgets? | Reference implementation and correctness repairs delivered |
+| 3.1 | Does cached-candidate reuse earn its lookup and fill cost? | Completed; no net advantage demonstrated |
+| 3.2 | Do compact caches and seed-guided IVF improve the trade-off? | Completed; layout improvement and limited same-budget coverage gains |
+| 3.3 | Can partial partitions resume correctly, and are geometric bounds useful? | Protocol prepared; implementation has not started |
+| Remaining stage 3 | When are sparse routing, CPU calibration and prefetching worthwhile? | Pending |
+| 4 | Can an independent path issue numerically valid exact certificates? | Theory under review; implementation pending |
+| 5 | Does shared coordination add value beyond separate components? | Pending |
+| 6 | Do benefits survive larger real corpora, updates and failures? | Pending |
 
-A 20% reduction in one declared major cost is a research challenge, not a promise. All other dimensions and regressions must be reported. Repeatable benefit on at least two meaningful workloads is required before integrated-prototype acceptance. Semantic conclusions require reviewed labels. Do not manufacture scale using repeated copies of data.
+I will finish and review each part before opening the next. Each protocol fixes its hypothesis, baseline, metrics, acceptance conditions and adjustment rules in advance. Negative results stay in the archive.
 
-每一部分固定假设、基线、指标、通过／调整条件，完成后报告并等待负责人确认。失败记录保留，不通过更换指标或选择弱基线制造结论。详细中文执行口径见 [研究总纲](research/ChatGPT/总体计划执行-v1/执行总纲.md)。
+A 20% reduction in at least one declared major cost is a research challenge, not a forecast. I also require quality and freshness to hold, disclose regressions, and seek repeatable benefits on at least two meaningful workloads before an integrated review. A working prototype does not establish novelty or a generational improvement.
+
+Scale-up will use real deduplicated text. Missing 10,000- or 50,000-chunk tiers will be reported rather than filled with duplicates. Expert-model training remains paused. Detailed stage records are available in the bilingual research index.

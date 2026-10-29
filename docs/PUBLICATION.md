@@ -1,11 +1,15 @@
-# Publication scope / 发布范围
+# Publication and maintenance policy
 
-This is a curated public research archive as of 2026-10-29. It includes the current formal execution plan, staged code, protocols, aggregate results, negative conclusions, correction records and selected reviewed theory supplements. It is not a mirror of the entire local workspace.
+[English](PUBLICATION.md) | [简体中文](PUBLICATION.zh-CN.md)
 
-Excluded: credentials, knowledge-base documents, private query texts, embeddings, databases, per-request private records, training artifacts, unreviewed bulk model output, and local runtime environments. Exclusion from Git is not a permission to distribute those assets elsewhere.
+I maintain SERA as a public research archive, not a mirror of my private workspace. The public material includes architecture decisions, frozen protocols, prototype code, aggregate results, correction records and selected external research proposals with attribution.
 
-The original private workspace remains the experiment authority. Public copies are generated from explicitly selected materials; original files and failed records are not overwritten. `PUBLICATION-MANIFEST.json` records the selected files and both source/publication hashes. Absolute workstation paths are replaced with `<LOCAL_PATH>`; external-reviewed supplements are proposals, not implemented guarantees.
+Credentials, knowledge-base documents, private queries, embeddings, databases, per-request records, training artifacts and local environments stay outside the repository. The private experiment record remains the authority for runs whose inputs cannot be distributed. Excluding an asset from Git does not authorize distributing it elsewhere.
 
-Maintain one stable README in English and Chinese, with dated status. Each accepted research part adds its frozen protocol, relevant code, results, limitations and changelog entry. Use commits/tags to identify stages; major milestones may later receive releases and DOI archives. No unattended updates are configured.
+I write the Chinese and English editions from the same evidence and intended claims, using the natural structure of each language. Neither edition is produced by translating the other. Both must preserve the same experimental conditions, formulas, status and limitations. External proposals remain attributed proposals rather than my independently verified accomplishments.
 
-Original project code and documentation are licensed under Apache-2.0 following owner authorization on 2026-10-29. Third-party materials and dependencies retain their own terms. Original research direction comes from the project owner; AI-assisted theory and implementation must remain distinguishable from validated observations. Third-party research links do not grant rights to third-party implementations or datasets.
+Code, identifiers, numeric data and hashes have one canonical representation. Bilingual reading guides explain these artifacts without creating divergent executables or altering machine-readable facts. The official Apache-2.0 license is retained verbatim; my Chinese licensing guide explains the project's choice without replacing the legal text.
+
+After reviewing a research part, I publish its relevant protocol, code, results and limits together. I preserve failures and mark superseded claims. Major milestones may receive tags, releases and later a DOI archive. No automatic research or publishing schedule is configured.
+
+Original project code and documentation use Apache-2.0. Third-party dependencies and separately identified materials retain their own terms. Research progress, engineering readiness, novelty and generational improvement remain separate judgments.

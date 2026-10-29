@@ -1,5 +1,7 @@
 # 给 WorkBuddy 的提示词
 
+[English](给WorkBuddy-组合界诊断提示词.en.md) | [简体中文](给WorkBuddy-组合界诊断提示词.md)
+
 使用：将下方提示词整段交给 WorkBuddy；正文完成后，再单独发送末尾自审提示。此任务为理论与诊断协议，不启动正式阶段四。
 
 ---
