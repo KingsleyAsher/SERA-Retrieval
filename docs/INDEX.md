@@ -6,6 +6,7 @@ I organize the archive below by document. Each row opens the English or Chinese 
 
 | Document | English | Chinese |
 |---|---|---|
+| Stage 3 follow-on research (3.5–3.9) | [阅读](RESEARCH-CONTINUATION.zh-CN.md) | [English](RESEARCH-CONTINUATION.md) |
 | State-reuse opportunity audit | [Read](../research/reuse_audit/README.md) | [中文](../research/reuse_audit/README.zh-CN.md) |
 | Cloud research workspace | [Read](CLOUD-RESEARCH.md) | [中文](CLOUD-RESEARCH.zh-CN.md) |
 | Stage 3.3 negative diagnostic result | [Read](../research/stage33/REPORT.md) | [中文](../research/stage33/REPORT.zh-CN.md) |

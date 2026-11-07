@@ -6,6 +6,7 @@
 
 | 材料 | 中文 | 英文 |
 |---|---|---|
+| 阶段三后续研究（3.5–3.9） | [阅读](RESEARCH-CONTINUATION.zh-CN.md) | [English](RESEARCH-CONTINUATION.md) |
 | 状态复用机会审计 | [阅读](../research/reuse_audit/README.zh-CN.md) | [English](../research/reuse_audit/README.md) |
 | 云端研究工作区 | [阅读](CLOUD-RESEARCH.zh-CN.md) | [English](CLOUD-RESEARCH.md) |
 | 阶段三第三部分负结果报告 | [阅读](../research/stage33/REPORT.zh-CN.md) | [English](../research/stage33/REPORT.md) |

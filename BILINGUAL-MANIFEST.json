@@ -182,6 +182,10 @@
     {
       "en": "docs/CLOUD-RESEARCH.md",
       "zh": "docs/CLOUD-RESEARCH.zh-CN.md"
+    },
+    {
+      "en": "docs/RESEARCH-CONTINUATION.md",
+      "zh": "docs/RESEARCH-CONTINUATION.zh-CN.md"
     }
   ],
   "shared_artifacts": [
