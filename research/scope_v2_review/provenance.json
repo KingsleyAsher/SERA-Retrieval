@@ -1,0 +1,60 @@
+{
+  "scope": "scope-v1 counterexamples and scope-v2 correction",
+  "files": {
+    "阶段二/framework.py": {
+      "source_sha256": "b316f760923c2a6fc5ebb60a2943fa409119e859b3725968806a298e3a684d24",
+      "published_sha256": "b316f760923c2a6fc5ebb60a2943fa409119e859b3725968806a298e3a684d24",
+      "transformation": "unchanged"
+    },
+    "阶段三-合法范围成本诊断/scope_engine.py": {
+      "source_sha256": "a582584cc5a77cf67288670ccd89628dd3410f38d6c0a3b4e44e5fb13b06c155",
+      "published_sha256": "a582584cc5a77cf67288670ccd89628dd3410f38d6c0a3b4e44e5fb13b06c155",
+      "transformation": "unchanged"
+    },
+    "阶段三-合法范围成本诊断/select_scope.py": {
+      "source_sha256": "cd6f65fe2732e806a36714fa7621b6e6d431890073072ca7adc2d84a0c99faef",
+      "published_sha256": "a1c1825a5d02efa346d7b90947f600e701ca4771eef913bdd4f748f93674a3d7",
+      "transformation": "requires explicit fixture directory"
+    },
+    "阶段三第四部分定点修订-2026-10-30/scope_engine.py": {
+      "source_sha256": "fd6b28bbe6ee00cfd75259ee4bf553db9a9c2881c494a7a55bd27c27a39fb3cd",
+      "published_sha256": "fd6b28bbe6ee00cfd75259ee4bf553db9a9c2881c494a7a55bd27c27a39fb3cd",
+      "transformation": "unchanged"
+    },
+    "阶段三第四部分定点修订-2026-10-30/select_scope.py": {
+      "source_sha256": "98043bed55af407b3e767d8da0fae7265f3fd52ccb23247cd384040a61d17dad",
+      "published_sha256": "db5def55214115f234777ff8a2b00ebe73608a292f5b2b61af71878d6bdd8ca8",
+      "transformation": "requires explicit fixture directory"
+    },
+    "阶段三第四部分定点修订-2026-10-30/verify_revision.py": {
+      "source_sha256": "8fca6b48caca9a131197f6afb2548a8839b568b20d91f062bb409e2aa37e6d57",
+      "published_sha256": "8fca6b48caca9a131197f6afb2548a8839b568b20d91f062bb409e2aa37e6d57",
+      "transformation": "unchanged"
+    },
+    "阶段三第四部分定点修订-2026-10-30/checks.py": {
+      "source_sha256": "879df1d59338dd8f1e2795d9e7e8dc5595018f5db97761671d1f2e11a5ad75e4",
+      "published_sha256": "879df1d59338dd8f1e2795d9e7e8dc5595018f5db97761671d1f2e11a5ad75e4",
+      "transformation": "unchanged"
+    },
+    "阶段三第四部分定点修订-2026-10-30/review-probe-original.py": {
+      "source_sha256": "a904ec4ea7ce330f4a63c13d1a033bac9b54271ec1fb3c5f712977c6fbc2092d",
+      "published_sha256": "a904ec4ea7ce330f4a63c13d1a033bac9b54271ec1fb3c5f712977c6fbc2092d",
+      "transformation": "unchanged"
+    },
+    "阶段三第四部分定点修订-2026-10-30/probe-before.json": {
+      "source_sha256": "2a48472c8191bf6ac7cf35300a91602d06dda8a9127367d4b38fb2533f34dec4",
+      "published_sha256": "2a48472c8191bf6ac7cf35300a91602d06dda8a9127367d4b38fb2533f34dec4",
+      "transformation": "unchanged"
+    },
+    "阶段三第四部分定点修订-2026-10-30/probe-after.json": {
+      "source_sha256": "efe2d6e45620811f06c93f07558de85cd739b766aa5deb98c364bdd71c99bf10",
+      "published_sha256": "efe2d6e45620811f06c93f07558de85cd739b766aa5deb98c364bdd71c99bf10",
+      "transformation": "unchanged"
+    },
+    "阶段三第四部分定点修订-2026-10-30/修订契约.json": {
+      "source_sha256": "69d9635a2e6d314a997a6ab4b46f6b3a4be7eaa20d54c0804677cdd73cabc991",
+      "published_sha256": "69d9635a2e6d314a997a6ab4b46f6b3a4be7eaa20d54c0804677cdd73cabc991",
+      "transformation": "unchanged"
+    }
+  }
+}

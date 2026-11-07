@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "version": "scope-v2",
+  "scope": "R1 terminal persistence and R2 exact percentage correction only",
+  "completion": {
+    "durable_phase": "done",
+    "method": "serialize a terminal dataclass copy in the successful SQLite transaction, synchronize in-memory original only after success",
+    "resume_done": "same request and snapshot returns saved items without new scoring/source/save charges",
+    "insufficient_budget": "Pending/commit, no terminal database record",
+    "sqlite_save_error": "Pending/commit for observed save error; charged issued attempts are retained; retry requires remaining or explicitly added caller budget",
+    "legacy_checkpoint_migration": false,
+    "arbitrary_crash_exactly_once": false
+  },
+  "selector": {"minimum": "10*count >= total", "maximum": "4*count <= 3*total", "nonempty_total": "total > 0", "hidden_minimum_ten_members": false, "nearest_half": "abs(2*count-total), then Unicode path"},
+  "original_measurements": "scope-v1 only; remain usable under independent review limits; no scope-v2 performance measured",
+  "timer_boundary": "original executor internal span, not caller/return/recording or entire startup pipeline",
+  "checks": {"targeted_groups": 4, "inherited_groups": 6, "real_matrix_rerun": false},
+  "next_part_started": false
+}

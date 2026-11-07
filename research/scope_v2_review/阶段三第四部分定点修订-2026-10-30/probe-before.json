@@ -1,0 +1,19 @@
+{
+  "completed_checkpoint": {
+    "first_result": "approximate",
+    "first_items": 1,
+    "saved_phase": "commit",
+    "resume_result": "pending",
+    "resume_reason": "state_commits",
+    "resume_items": 0,
+    "commits": 1,
+    "defect_observed": true
+  },
+  "scope_lower_boundary": {
+    "total_visible": 101,
+    "selected_members": 10,
+    "selected_fraction": 0.09900990099009901,
+    "declared_minimum": 0.1,
+    "defect_observed": true
+  }
+}

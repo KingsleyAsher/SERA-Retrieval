@@ -6,6 +6,8 @@
 
 | 材料 | 中文 | 英文 |
 |---|---|---|
+| scope-v2 review | [阅读](../research/scope_v2_review/README.zh-CN.md) | [English](../research/scope_v2_review/README.md) |
+| Research data status | [阅读](RESEARCH-DATA-STATUS.zh-CN.md) | [English](RESEARCH-DATA-STATUS.md) |
 | 后续虚构机制实验资料 | [阅读](../research/stage35_39_mechanics/README.zh-CN.md) | [English](../research/stage35_39_mechanics/README.md) |
 | 阶段三后续研究（3.5–3.9） | [阅读](RESEARCH-CONTINUATION.zh-CN.md) | [English](RESEARCH-CONTINUATION.md) |
 | 状态复用机会审计 | [阅读](../research/reuse_audit/README.zh-CN.md) | [English](../research/reuse_audit/README.md) |

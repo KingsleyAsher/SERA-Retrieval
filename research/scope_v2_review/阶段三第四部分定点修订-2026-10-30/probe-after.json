@@ -1,0 +1,34 @@
+{
+  "completed_checkpoint": {
+    "first_result": "approximate",
+    "first_items": 1,
+    "saved_phase": "done",
+    "resume_result": "approximate",
+    "resume_reason": "",
+    "resume_items": 1,
+    "commits": 1,
+    "defect_observed": false
+  },
+  "scope_lower_boundary": {
+    "total_visible": 101,
+    "selected_members": null,
+    "selected_fraction": null,
+    "declared_minimum": 0.1,
+    "defect_observed": false,
+    "outcome": "no_eligible_directory"
+  },
+  "flips": {
+    "completed_checkpoint": {
+      "before": true,
+      "after": false,
+      "expectedAfterFix": false
+    },
+    "scope_lower_boundary": {
+      "before": true,
+      "after": false,
+      "expectedAfterFix": false
+    }
+  },
+  "allFlipsAsExpected": true,
+  "adaptation": "same review defect predicates; R2 no-eligible ValueError is now the expected valid outcome"
+}

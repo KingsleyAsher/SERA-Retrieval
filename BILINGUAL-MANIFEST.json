@@ -190,6 +190,14 @@
     {
       "en": "research/stage35_39_mechanics/README.md",
       "zh": "research/stage35_39_mechanics/README.zh-CN.md"
+    },
+    {
+      "en": "research/scope_v2_review/README.md",
+      "zh": "research/scope_v2_review/README.zh-CN.md"
+    },
+    {
+      "en": "docs/RESEARCH-DATA-STATUS.md",
+      "zh": "docs/RESEARCH-DATA-STATUS.zh-CN.md"
     }
   ],
   "shared_artifacts": [
@@ -290,7 +298,19 @@
     "research\\stage35_39_mechanics\\workflow\\workflow_fixture.py",
     "research/stage35_39_mechanics/verify.py",
     "research/stage35_39_mechanics/workflow/workflow_fixture.py",
-    "research/stage35_39_mechanics/policy/joint_policy.py"
+    "research/stage35_39_mechanics/policy/joint_policy.py",
+    "research/scope_v2_review/provenance.json",
+    "research/scope_v2_review/阶段三-合法范围成本诊断/scope_engine.py",
+    "research/scope_v2_review/阶段三-合法范围成本诊断/select_scope.py",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/checks.py",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/probe-after.json",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/probe-before.json",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/review-probe-original.py",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/scope_engine.py",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/select_scope.py",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/verify_revision.py",
+    "research/scope_v2_review/阶段三第四部分定点修订-2026-10-30/修订契约.json",
+    "research/scope_v2_review/阶段二/framework.py"
   ],
   "official_license": "LICENSE",
   "license_explanation": [
