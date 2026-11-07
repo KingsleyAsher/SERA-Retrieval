@@ -8,6 +8,10 @@ Protocol files fix parameters; reports establish whether they were executed. A p
 
 | Artifact | Purpose and evidence boundary |
 |---|---|
+| [Stage-3.3 guide](../research/stage33/README.md), [checks](../research/stage33/results/checks.json), [provenance](../research/stage33/provenance.json) | Canonical `frontier.py`, `diagnostics.py`, `private_replay.py`, tests and CLI; first gate verified, real 128-case diagnostic not executed. |
+| [Reusable foundations inventory](../research/reuse_foundation/README.md#commands-and-artifact-inventory) | Complete shared module inventory: adapters, snapshots/events, dependency guards, resource lanes, exact/ANN baselines, fixtures, tests, benchmark, frozen-regression runner and CLI. |
+| [Reuse provenance](../research/reuse_foundation/provenance.json) | Upstream commits, MIT license paths and hashes for new code and synthetic results; separate from frozen research provenance. |
+| [Reuse checks](../research/reuse_foundation/results/checks.json), [benchmark](../research/reuse_foundation/results/benchmark-20000.json), [frozen regressions](../research/reuse_foundation/results/frozen-regressions.json) | Synthetic mechanisms and one invented workload; no semantic-quality claim or stage advancement. |
 | [.gitignore](../.gitignore) | Python/local-environment exclusions plus private research and credential rules. |
 | [BILINGUAL-MANIFEST.json](../BILINGUAL-MANIFEST.json) | Document pairing and the native-writing policy; not experimental evidence. |
 | [CITATION.cff](../CITATION.cff) | Canonical machine-readable citation metadata; see the citation guide. |

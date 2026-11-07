@@ -357,5 +357,48 @@
       "initial_publication_sha256": "995df5f52c94c8b261674916b18d30fda46bd4ebdf7a638c5f08236592cd0d49"
     }
   ],
-  "editorial_update": "2026-10-29: owner-perspective prose and independently authored English editions; code/data unchanged"
+  "editorial_update": "2026-10-29: owner-perspective prose and independently authored English editions; code/data unchanged",
+  "reuse_foundation_delivery": {
+    "date": "2026-11-07",
+    "provenance": "research/reuse_foundation/provenance.json",
+    "provenance_sha256": "e1e14706de5cdf9bc84faf7d461dfb74f400da6cf5bb122f5f7c3feedbe418b9",
+    "historical_files_and_source_hashes_preserved": true,
+    "documentation_and_attribution_updates": {
+      "README.md": "f182f9fbb67205c861f43540dc372c9740998bb50e89bb13506a3d38cfd45f93",
+      "README.zh-CN.md": "5b35ab17f7561dff74c972d1102d00df651aa277f691a0719b0e86258a4512e0",
+      "NOTICE": "08e79c631c924a785ff93b63f50c791b0a46e75ebda3f4dbe035bd7d1e072fd4",
+      "docs/INDEX.md": "b486e5c1c8de414a94a15b7d69f78041dc04e62b7e04d18e06b0534d6a62ab5a",
+      "docs/INDEX.zh-CN.md": "2915779ae482d6dcff07554792b0db85dd51569c0fd7c58bc566824c84965f4f",
+      "docs/ARTIFACTS.md": "3e26082f1e54ec5852d41d52c14cbd958e28625bf273d9967c66d9dd842f92dc",
+      "docs/ARTIFACTS.zh-CN.md": "af645d9f118fc25cbc51cdf12d21bd08179618f7daaae2fb95eff7af4187b5b7",
+      "docs/REPRODUCIBILITY.md": "ab035d639085bda094cf807a726be36fd9316821d01793fb7f05b5e6030f5699",
+      "docs/REPRODUCIBILITY.zh-CN.md": "da3a3d471dca28d73083e4e4c2d4c21d425b7a78a039da9c1a05d9131382ed4d"
+    }
+  },
+  "stage33_partial_delivery": {
+    "date": "2026-11-07",
+    "provenance": "research/stage33/provenance.json",
+    "provenance_sha256": "cb9744e13735f831ffa58c632257f1ade4bb10e038394b28af518ab1dbbfbb28",
+    "actual_128_cases_executed": false,
+    "navigation_and_status_updates": {
+      "README.md": "716d77278e78d0f5da043de18a3fa99608384bfd3b66aefabe6c5dbf9266e75c",
+      "README.zh-CN.md": "dfe6c66c4cdb97c235d3dbbdbd1571f994fc9f5b348e3e29e4892626be4dee65",
+      "ROADMAP.md": "c60e06f9458002dd9b9a84bec6d66b4ddc3f48042b554dce64a4ab75e3edf9c7",
+      "ROADMAP.zh-CN.md": "fef8d475c67893328e1f27f61c3c6c366e485520d23386af6155a0aecc4c20b7",
+      "docs/ARCHITECTURE.md": "304995c1cca0b1cce18a61c25b6c66fa32ad58bc15c07de8dbf460bda8bb7322",
+      "docs/ARCHITECTURE.zh-CN.md": "2d02f6be82976003c7f9fa1add71f55fc808e19ab9f438e1f864ceff95c50b75",
+      "docs/INDEX.md": "fb3358c8f9519d4ce7711af62596ce9a62d460e062d6a0994ac411049f89a29d",
+      "docs/INDEX.zh-CN.md": "cd5e4a995f632a67b1ef2649e049b722a0a042c36078c227fa9a15dc37144564",
+      "docs/ARTIFACTS.md": "1444d70da51232cffd2e82db71ee529e75a97582b16c2fbaed1d2405da18ca40",
+      "docs/ARTIFACTS.zh-CN.md": "1b15d44fb23308fbdebb93b7fee61fdcadd98e196eb432f5615371fd844bef59"
+    },
+    "execution_status_update": {
+      "path": "research/ChatGPT/总体计划执行-v1/执行状态.json",
+      "sha256": "5555bff987f624ff29fa5db9a5f521ea8eb26a4a021d2694fc382a57b7f2f6ff"
+    },
+    "changelog_updates": {
+      "CHANGELOG.md": "61307f67af7074998226caadcc20441c64ccdcdd8b98b0b84233a4b17f8b3e08",
+      "CHANGELOG.zh-CN.md": "87c571e6f5fa0614707b94dfd3c95644999fe61cb12284fb6ea03c6745c66f9d"
+    }
+  }
 }

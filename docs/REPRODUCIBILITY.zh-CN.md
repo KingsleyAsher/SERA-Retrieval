@@ -2,6 +2,8 @@
 
 [English](REPRODUCIBILITY.md) | [简体中文](REPRODUCIBILITY.zh-CN.md)
 
+独立的[基础机制复用指南](../research/reuse_foundation/README.zh-CN.md)提供新增命令行检查、合成基准及临时副本回归入口。隔离回归会为历史 `review_fix_probes.py` 补齐必需的 `--module`、`--output`；下方历史简查列表中的该脚本不能无参数直接运行。新增证据位于 `research/reuse_foundation/results/`，不会覆盖阶段原始记录。
+
 我将可直接执行的机制简查和依赖私有数据的性能实验分开公开。已记录环境为 Python 3.13、NumPy 2.5.4、scikit-learn 1.9.1、USearch 2.26.6。
 
 在仓库根目录运行：

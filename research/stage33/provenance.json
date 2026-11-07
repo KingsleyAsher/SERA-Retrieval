@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-07",
+  "status": "gate1_verified_gate2_blocked_missing_inputs",
+  "protocol_path": "research/ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/protocol.json",
+  "protocol_sha256": "d2b321e7be953af685fba7c41e77d8ddd10a62ce1a4709b353a7bebab9dfb3bd",
+  "frozen_stage32_changed": false,
+  "training_started": false,
+  "online_stopping": false,
+  "actual_128_cases_executed": false,
+  "screening_decision": null,
+  "bridge_path": "research/reuse_foundation/common.py",
+  "bridge_sha256": "43f54103f13798d0cbb604b7909ea0d0579e0e2f18d5b75aab17708a17e2c581",
+  "artifacts": {
+    "README.md": "9dbac84a445e85bfa4a47ce899dde7c18e78da9fc51c3acff803ca6f86e33cf2",
+    "README.zh-CN.md": "d8e14c871b282c335fa5d42f5da8bbba78e1ed550299433362175630a9c0edc3",
+    "__init__.py": "1236b82a607b38483f33617d58b2f3e41cbda39b7a3f5cbe2fbd88ad5a3ac02f",
+    "__main__.py": "eab82d7365113b386854ffdacf21bdd4c8e46d93d35049cc1c8d2c83be2200d2",
+    "diagnostics.py": "586e4b23cc7f5af6036e7ed6ca66a964c1e30aab4e6c94a9eabd06f4f92b26e6",
+    "frontier.py": "94d713e230f203f1837e05ab38a9e655da295df604af7a5ec15640f30ea9bd93",
+    "private_replay.py": "5e70f64c72b4f06d724bbfddb2e7d9eddc2471af57beb759514a1bcca6576fbc",
+    "results/checks.json": "9f875eb2ef91fc9c3d2ad936f1a55ed6817f65edf9b57f8a01f6aafc71de4700",
+    "test_stage33.py": "6855d56443750314b00b01d5c3592fe56b19885bc9021ebd52d35d2a6e0466e4"
+  },
+  "geometry_scope": "two invented tests only; not an empirical potential study",
+  "private_driver_scope": "preflight tested; full frozen-input replay not executed"
+}

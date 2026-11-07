@@ -6,9 +6,9 @@
 
 I started SERA to explore whether retrieval, candidate reuse, update repair and predictive work can share versioned execution state and a resource ledger. My objective is a better joint trade-off across semantic quality, latency, resource efficiency, freshness and stability, beginning with a personal knowledge base and extending only when evidence supports larger-scale claims.
 
-## Current evidence · 2026-10-29
+## Current evidence · 2026-11-07
 
-The common executor and stages 3.1–3.2 are delivered. Stage 3.3 has a protocol but is not implemented. Expert training is paused. Predictive prefetching, learned stopping and strict certification are research directions rather than shipped capabilities.
+The common executor and stages 3.1–3.2 are delivered. [Stage 3.3](research/stage33/README.md) now passes its public continuation/accounting gate; the specified 128-case offline diagnostic is blocked by missing private frozen inputs. Expert training is paused. Predictive prefetching, learned stopping and strict certification are research directions rather than shipped capabilities.
 
 The private snapshot contains 1,213 chunks from 114 sources with BGE-M3 dense1024 embeddings. Stage-3 diagnostics use 16 development families and 48 unique texts, including 32 rewrites. Semantic labels remain unreviewed.
 
@@ -22,6 +22,7 @@ I do not claim formal semantic uplift, large-scale success, validated novelty or
 
 ## Explore and reproduce
 
+- [Reusable foundations](research/reuse_foundation/README.md) · [Engineering delivery report](research/reuse_foundation/REPORT.md) — isolated synthetic validation; research stage status is unchanged.
 - [Roadmap](ROADMAP.md) · [Architecture](docs/ARCHITECTURE.md)
 - [Results](docs/RESULTS.md) · [Reproduction](docs/REPRODUCIBILITY.md)
 - [Research library](docs/INDEX.md) · [Code and data guide](docs/ARTIFACTS.md)

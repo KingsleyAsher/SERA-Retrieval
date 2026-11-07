@@ -2,6 +2,8 @@
 
 [English](REPRODUCIBILITY.md) | [简体中文](REPRODUCIBILITY.zh-CN.md)
 
+The independent [reuse foundation guide](../research/reuse_foundation/README.md) documents its new CLI checks, synthetic benchmark and disposable-copy regression runner. The latter supplies the required `--module` and `--output` options to the historical `review_fix_probes.py`; running that historical script without those options is incomplete. New evidence lives under `research/reuse_foundation/results/` and does not replace archived stage outputs.
+
 I publish executable mechanics checks separately from private-data performance evidence. The recorded environment used Python 3.13, NumPy 2.5.4, scikit-learn 1.9.1 and USearch 2.26.6.
 
 From the repository root:

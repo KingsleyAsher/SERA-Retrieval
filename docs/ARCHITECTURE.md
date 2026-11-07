@@ -10,6 +10,6 @@ The ledger distinguishes model/network work, local computation, logical reads, c
 
 The result interface reserves approximate, probabilistic, certified, pending and rejected states. Reservation is not implementation: the daily path currently provides no strict certificate or inherited probability guarantee. Source checks verify materialized snapshot text; they do not prove that the original filesystem file was independently authenticated.
 
-For the next part, I distinguish partition scheduling from unfinished-region coverage. An opened posting list is not a completed partition. Active tails and enumerated-but-unscored items must survive checkpoints. Only scoring completion can discharge their outstanding work. This is a protocol requirement, not a claim that stage 3.3 already runs.
+The isolated [stage-3.3 executor](../research/stage33/README.md) distinguishes partition scheduling from unfinished-region coverage. An opened posting list is not a completed partition. Active tails and enumerated-but-unscored items survive checkpoints; only scoring completion discharges their work. Public mechanics checks now pass. The frozen-input offline bound diagnostic has not run, and no bound is used for online stopping.
 
 Daily normalized float64 inner product and the future stored-FP32 real squared-L2 certification contract remain separate. Ordinary floating-point geometric diagnostics cannot bridge that distinction without an explicit numerical argument.

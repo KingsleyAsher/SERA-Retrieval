@@ -8,6 +8,10 @@
 
 | 资料 | 用途与解释边界 |
 |---|---|
+| [阶段三第三部分说明](../research/stage33/README.zh-CN.md)、[检查](../research/stage33/results/checks.json)、[来源](../research/stage33/provenance.json) | 共享 `frontier.py`、`diagnostics.py`、`private_replay.py`、测试与命令行；第一门通过，正式 128 情形尚未执行。 |
+| [基础复用模块资料清单](../research/reuse_foundation/README.zh-CN.md#运行与资料索引) | 完整共享代码清单覆盖适配、快照／事件、依赖、资源通道、精确与 ANN 基线、夹具、测试、基准、隔离回归及命令行。 |
+| [复用来源记录](../research/reuse_foundation/provenance.json) | 上游提交、MIT 许可位置与新增代码／合成结果哈希；不覆盖冻结研究来源记录。 |
+| [复用检查](../research/reuse_foundation/results/checks.json)、[合成基准](../research/reuse_foundation/results/benchmark-20000.json)、[冻结回归](../research/reuse_foundation/results/frozen-regressions.json) | 仅表示合成机制与一组虚构负载的结果，不证明语义质量或阶段推进。 |
 | [.gitignore](../.gitignore) | Python／本地环境及私人研究资产、凭据的排除规则。 |
 | [BILINGUAL-MANIFEST.json](../BILINGUAL-MANIFEST.json) | 文档配对与直接写作约定，不属于实验结果。 |
 | [CITATION.cff](../CITATION.cff) | 规范机器可读引用元数据，解释见引用说明。 |

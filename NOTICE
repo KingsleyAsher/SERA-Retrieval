@@ -4,3 +4,8 @@ Copyright 2026 KingsleyAsher
 Research direction and project stewardship: KingsleyAsher.
 Model-assisted proposals and implementation are distinguished from verified observations in the research reports.
 Third-party dependencies and references retain their respective copyrights and licenses.
+
+The isolated reuse_foundation module adapts engineering patterns from
+KingsleyAsher/Personal-Knowledge-Base and KingsleyAsher/DSH-Memory.
+Upstream commits, attribution and preserved MIT license texts are recorded in
+research/reuse_foundation/provenance.json and research/reuse_foundation/licenses/.

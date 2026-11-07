@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-07",
+  "kind": "isolated-reuse-foundation-engineering-delivery",
+  "sera_base_commit": "3813461d083979cfebaae92c8ef5a68a9a70e9a6",
+  "upstream": [
+    {
+      "repository": "KingsleyAsher/Personal-Knowledge-Base",
+      "commit": "038796ef05ec2123d149862a821a617ecc6412b6",
+      "license": "MIT",
+      "license_path": "licenses/knowledge-MIT.txt",
+      "patterns": [
+        "packages/kb-core/src/retrieval.js",
+        "packages/kb-core/src/retrieval-worker.js",
+        "packages/kb-core/src/retrieval-cache.js",
+        "packages/kb-core/src/runtime-resources.js",
+        "packages/kb-core/src/storage-io.js"
+      ]
+    },
+    {
+      "repository": "KingsleyAsher/DSH-Memory",
+      "commit": "a016722b1103f770b7030cdab1a8aeae4c19f80d",
+      "license": "MIT",
+      "license_path": "licenses/memory-MIT.txt",
+      "patterns": [
+        "memory_core/plugin_scopes.py",
+        "memory_core/store.py",
+        "memory_core/memory_flow.py",
+        "memory_core/claim_store.py",
+        "plugin/src/knowledge-memory.js"
+      ]
+    }
+  ],
+  "adaptation": "Independent Python implementations of source engineering patterns; plugin runtime files are not vendored. Original MIT license texts are preserved.",
+  "frozen_bridge": {
+    "path": "research/ChatGPT/总体计划执行-v1/阶段二/framework.py",
+    "sha256": "be100ebe36746c3de05b0f99168d3c3faef42f6ff06ec38e4c1e697940cf6b30"
+  },
+  "dependencies": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "usearch": "2.26.6"
+  },
+  "research_status_changed": false,
+  "private_inputs_used": false,
+  "model_calls": 0,
+  "artifacts": {
+    "README.md": "8beb5892683313d78408188ec39e3057bdb344449609678e60ed69983e24beeb",
+    "README.zh-CN.md": "0b1426d9262f40901c24ac6cf57e3a1626ac22ac99ef8261c4706fc7bf4ab010",
+    "REPORT.md": "3d79a6591890f778d63d1e5a58812647056095b7030246288e7cb886471e817f",
+    "REPORT.zh-CN.md": "1cbd9ea5ce971adf33ae97440782fa88ca4033eeefc0c4b62f68faa080ca59b6",
+    "__init__.py": "a08f545057ee0b25e7db31a497490f724a96257eafdc6adf6727afa613391ec7",
+    "__main__.py": "4a12d7b23eb7a11d7a1b809772bed1cd7a5bcdc8d362a09bc25c0780c14199d6",
+    "baselines.py": "1f8946ee9f770c33fc58efcb0f187d7a81824f0ace98726997ff1aed4ab9f65b",
+    "benchmark.py": "d176754610a51199c8eeee430c1a9838d848591bb351a10d22f034d956577939",
+    "common.py": "43f54103f13798d0cbb604b7909ea0d0579e0e2f18d5b75aab17708a17e2c581",
+    "fixtures.py": "db3bf6235cff45f20baa461c6e33ec66e8d3d7102525031d11b538004cb060cd",
+    "licenses/knowledge-MIT.txt": "39ef89056baa986e05f881cc739300a636d4288c2f0600f54551fe2854326120",
+    "licenses/memory-MIT.txt": "becec5cb27f28e824b3d63c8978f525f7b7d02e301322d7cda535fa8b82dbdac",
+    "results/benchmark-20000.json": "875b79c775d2094a5cc0522e4706d51c843727069a3fa9a0bf16987bc61f7d69",
+    "results/checks.json": "28f5c3616ab5c6a7dc0dfb04c0d97029858bacee7ee23e00c4806c626cfc57ce",
+    "results/frozen-regressions.json": "28b5796d098ffb8efe41c8cb8dc5494129b899125d80340066517c1230feaef8",
+    "runtime.py": "00c8b5e09137d0adcab15bbd81800ea2b085a9e34bb6fe102a08d12389cd5702",
+    "sources.py": "8863be3ca4ee15ea519287b55e5a60eac501c5b39877280bad609d3592f86dae",
+    "store.py": "f938a8bd4a57e34db6c385dae1623ebe1c061a0986595744dd4a591a5af181d4",
+    "test_foundation.py": "8c34ed7dad67a2536ac2105e323e07db320712879d1d853fb7a218264733d88f",
+    "verification.py": "a4826d876f1e5650282e941ead85140cba6ae22dd04f346717b03473266c4cee"
+  }
+}

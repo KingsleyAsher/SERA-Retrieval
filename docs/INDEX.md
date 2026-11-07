@@ -6,6 +6,9 @@ I organize the archive below by document. Each row opens the English or Chinese 
 
 | Document | English | Chinese |
 |---|---|---|
+| Stage 3.3: verified continuation, blocked private diagnostics | [Read](../research/stage33/README.md) | [中文](../research/stage33/README.zh-CN.md) |
+| Reusable foundations: implementation and commands | [Read](../research/reuse_foundation/README.md) | [中文](../research/reuse_foundation/README.zh-CN.md) |
+| Reuse engineering delivery and synthetic evidence | [Read](../research/reuse_foundation/REPORT.md) | [中文](../research/reuse_foundation/REPORT.zh-CN.md) |
 | Research roadmap | [Read](../ROADMAP.md) | [中文](../ROADMAP.md) |
 | Architecture and execution contracts | [Read](ARCHITECTURE.md) | [中文](ARCHITECTURE.md) |
 | What the experiments currently establish | [Read](RESULTS.md) | [中文](RESULTS.md) |

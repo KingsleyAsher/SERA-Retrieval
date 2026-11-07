@@ -6,6 +6,9 @@
 
 | 材料 | 中文 | 英文 |
 |---|---|---|
+| 阶段三第三部分：接续验证与离线诊断输入缺口 | [阅读](../research/stage33/README.zh-CN.md) | [English](../research/stage33/README.md) |
+| 基础机制复用实现与命令 | [阅读](../research/reuse_foundation/README.zh-CN.md) | [English](../research/reuse_foundation/README.md) |
+| 复用工程交付与合成证据 | [阅读](../research/reuse_foundation/REPORT.zh-CN.md) | [English](../research/reuse_foundation/REPORT.md) |
 | 总体研究路线 | [阅读](../ROADMAP.zh-CN.md) | [English](../ROADMAP.zh-CN.md) |
 | 架构与执行契约 | [阅读](ARCHITECTURE.zh-CN.md) | [English](ARCHITECTURE.zh-CN.md) |
 | 当前实验能说明什么 | [阅读](RESULTS.zh-CN.md) | [English](RESULTS.zh-CN.md) |
