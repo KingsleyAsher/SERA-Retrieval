@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-07",
+  "kind": "workload_and_state_reuse_opportunity_audit",
+  "input": "original private revision1216, 1213 BGE-M3 dense1024 vectors, 16 authored triples",
+  "natural_trace_required_for_hit_rates": true,
+  "sealed_stage1_splits_opened": false,
+  "measurements": {
+    "backends": ["full", "ann", "hybrid"],
+    "queries": 48,
+    "repetitions": 3,
+    "k": 10,
+    "ann_candidates": 50,
+    "ef": 128,
+    "independent_query_cache": false,
+    "prewarm": "one ordinary request per backend, separately charged and reported",
+    "ordinary_exact_cache_control": "each query miss immediately followed by identical hit; controlled pairs, no natural hit-rate claim",
+    "anchor_matching": "16 existing anchor vectors, current query IP top1, self-vector hash excluded; raw matching overhead measured separately"
+  },
+  "semantic_review": {
+    "pool": "top two full-canonical results of each anchor; same two evidence candidates reviewed against all three wordings",
+    "reviewer": "assistant evidence review, provisional; not user-accepted gold",
+    "grades": [0, 1, 2],
+    "unjudged": "unknown, never silently irrelevant",
+    "formal_quality_metrics": null
+  },
+  "opportunity": "component removal ceilings and p*t > lookup + amortized fill + invalidation maintenance; no assumed p from authored triples",
+  "limitations": ["materialized snapshot source checks are not original-file I/O", "no replayable natural update history", "no physical disk traffic or hard CPU caps"],
+  "new_embeddings": false,
+  "expert_training": false,
+  "parameter_search": false,
+  "stop": "deliver evidence review, workload card and opportunity ceilings; choose no new mechanism until natural workload evidence supports it"
+}

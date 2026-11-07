@@ -22,6 +22,7 @@
 
 ## 阅读入口
 
+- [状态复用机会审计](research/reuse_audit/README.zh-CN.md)、[云端研究工作区](docs/CLOUD-RESEARCH.zh-CN.md)：已完成证据初审与成本上限诊断，仍缺自然日志与经确认的语义标签。
 - [基础机制复用实现](research/reuse_foundation/README.zh-CN.md)、[工程交付报告](research/reuse_foundation/REPORT.zh-CN.md)：独立合成验证，不改变研究阶段状态。
 - [总体路线](ROADMAP.zh-CN.md)、[架构与契约](docs/ARCHITECTURE.zh-CN.md)
 - [结果边界](docs/RESULTS.zh-CN.md)、[复现说明](docs/REPRODUCIBILITY.zh-CN.md)

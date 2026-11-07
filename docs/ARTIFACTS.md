@@ -8,6 +8,7 @@ Protocol files fix parameters; reports establish whether they were executed. A p
 
 | Artifact | Purpose and evidence boundary |
 |---|---|
+| [Reuse audit](../research/reuse_audit/README.md), [protocol](../research/reuse_audit/protocol.json), [summary](../research/reuse_audit/results/summary.json), [checks](../research/reuse_audit/results/checks.json), [provenance](../research/reuse_audit/provenance.json) | Canonical measurement/analyzer/test code, provisional review counts and component removal ceilings; no natural hit rate, formal semantic metrics or new architecture mechanism. |
 | [Stage-3.3 guide](../research/stage33/README.md), [checks](../research/stage33/results/checks.json), [provenance](../research/stage33/provenance.json) | Canonical `frontier.py`, `diagnostics.py`, `private_replay.py`, tests and CLI; both gates complete; [128-case aggregate](../research/stage33/results/offline-summary.json) shows no pruning potential. |
 | [Reusable foundations inventory](../research/reuse_foundation/README.md#commands-and-artifact-inventory) | Complete shared module inventory: adapters, snapshots/events, dependency guards, resource lanes, exact/ANN baselines, fixtures, tests, benchmark, frozen-regression runner and CLI. |
 | [Reuse provenance](../research/reuse_foundation/provenance.json) | Upstream commits, MIT license paths and hashes for new code and synthetic results; separate from frozen research provenance. |

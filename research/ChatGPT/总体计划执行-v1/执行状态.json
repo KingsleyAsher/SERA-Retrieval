@@ -55,5 +55,18 @@
   "stage3_part3_results": "research/stage33/results/offline-summary.json",
   "reuse_foundation_delivery": "research/reuse_foundation/REPORT.zh-CN.md",
   "expert_training": false,
-  "online_bound_stopping": false
+  "online_bound_stopping": false,
+  "reuse_opportunity_audit": "controlled_audit_delivered_natural_workload_missing",
+  "reuse_audit_report": "research/reuse_audit/README.zh-CN.md",
+  "reuse_audit_questions_reviewed_provisionally": 48,
+  "reuse_audit_provisional_judgments": 96,
+  "reuse_audit_formal_quality_metrics": null,
+  "reuse_audit_measurement_count": 432,
+  "reuse_audit_controlled_cache_pairs": 144,
+  "reuse_audit_natural_query_trace": false,
+  "reuse_audit_replayable_updates": false,
+  "reuse_audit_new_mechanism_selected": false,
+  "cloud_scope": "SERA_research_only",
+  "cloud_private_workspace": "active_inventory_and_downloadable_backups",
+  "cloud_durable_private_storage": "not_configured"
 }

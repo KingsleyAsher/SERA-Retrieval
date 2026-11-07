@@ -8,6 +8,7 @@
 
 | 资料 | 用途与解释边界 |
 |---|---|
+| [复用审计](../research/reuse_audit/README.zh-CN.md)、[协议](../research/reuse_audit/protocol.json)、[汇总](../research/reuse_audit/results/summary.json)、[检查](../research/reuse_audit/results/checks.json)、[来源](../research/reuse_audit/provenance.json) | 规范测量／分析／测试代码、临时审阅计数与组件删除上限；没有自然命中率、正式语义指标或新架构机制。 |
 | [阶段三第三部分说明](../research/stage33/README.zh-CN.md)、[检查](../research/stage33/results/checks.json)、[来源](../research/stage33/provenance.json) | 共享 `frontier.py`、`diagnostics.py`、`private_replay.py`、测试与命令行；两门完成，[128 情形汇总](../research/stage33/results/offline-summary.json)未显示剪枝潜力。 |
 | [基础复用模块资料清单](../research/reuse_foundation/README.zh-CN.md#运行与资料索引) | 完整共享代码清单覆盖适配、快照／事件、依赖、资源通道、精确与 ANN 基线、夹具、测试、基准、隔离回归及命令行。 |
 | [复用来源记录](../research/reuse_foundation/provenance.json) | 上游提交、MIT 许可位置与新增代码／合成结果哈希；不覆盖冻结研究来源记录。 |

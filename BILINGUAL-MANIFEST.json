@@ -174,6 +174,14 @@
     {
       "en": "research/stage33/REPORT.md",
       "zh": "research/stage33/REPORT.zh-CN.md"
+    },
+    {
+      "en": "research/reuse_audit/README.md",
+      "zh": "research/reuse_audit/README.zh-CN.md"
+    },
+    {
+      "en": "docs/CLOUD-RESEARCH.md",
+      "zh": "docs/CLOUD-RESEARCH.zh-CN.md"
     }
   ],
   "shared_artifacts": [
@@ -254,7 +262,15 @@
     "research/stage33/provenance.json",
     "research/stage33/summarize.py",
     "research/stage33/results/input-validation.json",
-    "research/stage33/results/offline-summary.json"
+    "research/stage33/results/offline-summary.json",
+    "research/reuse_audit/provenance.json",
+    "research/reuse_audit/analyze.py",
+    "research/reuse_audit/test_audit.py",
+    "research/reuse_audit/__init__.py",
+    "research/reuse_audit/protocol.json",
+    "research/reuse_audit/measure.py",
+    "research/reuse_audit/results/checks.json",
+    "research/reuse_audit/results/summary.json"
   ],
   "official_license": "LICENSE",
   "license_explanation": [

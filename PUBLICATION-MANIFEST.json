@@ -415,5 +415,20 @@
       "CHANGELOG.md": "e537822a997101b69c3d424fd6edb2a1c08e0a53866207a6393b2773519e6eae",
       "CHANGELOG.zh-CN.md": "e490a319027df72bcdd15daee08b7dcf2dadc4574f618eca3d0e06b6deff5737"
     }
+  },
+  "reuse_opportunity_audit_delivery": {
+    "date": "2026-11-07",
+    "provenance": "research/reuse_audit/provenance.json",
+    "provenance_sha256": "c1369d17c39c95ada603ec53e08424fa2ac74efcee25d7118bee44c600c79944",
+    "current_status_sha256": "17a693c37e49a351f57ce9d89c7be3b6a6b806d10e029087110488825daf6554",
+    "natural_workload_supplied": false,
+    "semantic_judgments": "assistant_provisional_not_user_gold",
+    "new_architecture_mechanism": false,
+    "cloud_scope": "SERA research only",
+    "cloud_private_data_published": false,
+    "cloud_guides": {
+      "docs/CLOUD-RESEARCH.md": "487df80d7b601bc83509c5b91d11bddb3aa1baa1431032e7fbb82f977265acca",
+      "docs/CLOUD-RESEARCH.zh-CN.md": "67a07e4847c2d6930c0f70caeddd541ca21142aba4b8cecc4e16a8002936f674"
+    }
   }
 }

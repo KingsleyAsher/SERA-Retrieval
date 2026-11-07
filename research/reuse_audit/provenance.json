@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-07",
+  "kind": "opportunity_audit_not_architecture_benefit",
+  "base_commit": "a4623c4cb5ad6bc58c4c3c884a1473db83ebd6e7",
+  "artifacts": {
+    "README.md": "3a56fb59da282d9404dfd76c0b0fcfbf2af9c997bea0247985f69b0753176c7e",
+    "README.zh-CN.md": "4e2639e407194121dd634177bc91017d95d76cdb14b676a31cc6c90e12dfcd09",
+    "__init__.py": "1c7d477e3fb0300b9a179c6792acb10f578956f52ffba68dbf98ce9b2681efb4",
+    "analyze.py": "2e5c83db837ac43bf9466754caa7960c2bb5579824cca2e5862ec26fec9137b1",
+    "measure.py": "3f6de83b39ca34b56ebd77232296879c1036528451081fbabad0fed52e8d3c51",
+    "protocol.json": "3e1f56bd42226eb8c9977409e67437943a7d15a9a566b59bd469033bfad567af",
+    "results/checks.json": "b7c815a81b3ef986327f375c3a1ed5801e559543efd2b5a36509c8a3db9072f4",
+    "results/summary.json": "e2c76eba91ac11c34bf683839b9282833df527cc7564cdfce01da94e2303e58b",
+    "test_audit.py": "5818bb8f1af5ece3984312ffa57cfd5cbe1700c4cadfc96ed9d4ca54a408448a"
+  },
+  "private_measurement_sha256": "0bd301d8a71b750b80a7d30ff50cace643bd9db1082168f86207af8921023748",
+  "private_review_sha256": "115b93b9ec0ce3d3e4b24774cd43d45914aaed634914ec23c96033235997130c",
+  "formal_semantic_metrics": false,
+  "natural_workload_supplied": false,
+  "new_mechanism_selected": false,
+  "model_calls": 0
+}

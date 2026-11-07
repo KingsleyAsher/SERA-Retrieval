@@ -22,6 +22,7 @@ I do not claim formal semantic uplift, large-scale success, validated novelty or
 
 ## Explore and reproduce
 
+- [State-reuse opportunity audit](research/reuse_audit/README.md) · [Cloud research workspace](docs/CLOUD-RESEARCH.md): provisional evidence review and cost ceilings; natural traces and accepted semantic labels remain missing.
 - [Reusable foundations](research/reuse_foundation/README.md) · [Engineering delivery report](research/reuse_foundation/REPORT.md) — isolated synthetic validation; research stage status is unchanged.
 - [Roadmap](ROADMAP.md) · [Architecture](docs/ARCHITECTURE.md)
 - [Results](docs/RESULTS.md) · [Reproduction](docs/REPRODUCIBILITY.md)

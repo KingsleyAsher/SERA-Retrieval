@@ -1,0 +1,17 @@
+{
+  "format": 1,
+  "passed": true,
+  "tests": 7,
+  "synthetic_fixtures": true,
+  "code_sha256": {
+    "analyze.py": "2e5c83db837ac43bf9466754caa7960c2bb5579824cca2e5862ec26fec9137b1",
+    "test_audit.py": "5818bb8f1af5ece3984312ffa57cfd5cbe1700c4cadfc96ed9d4ca54a408448a",
+    "__init__.py": "1c7d477e3fb0300b9a179c6792acb10f578956f52ffba68dbf98ce9b2681efb4",
+    "measure.py": "3f6de83b39ca34b56ebd77232296879c1036528451081fbabad0fed52e8d3c51"
+  },
+  "combined_regression": {
+    "passed": true,
+    "tests": 47,
+    "command": "python -m unittest research.reuse_audit.test_audit research.stage33.test_stage33 research.reuse_foundation.test_foundation -q"
+  }
+}
