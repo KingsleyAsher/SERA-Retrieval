@@ -6,6 +6,7 @@
 
 | 材料 | 中文 | 英文 |
 |---|---|---|
+| 后续虚构机制实验资料 | [阅读](../research/stage35_39_mechanics/README.zh-CN.md) | [English](../research/stage35_39_mechanics/README.md) |
 | 阶段三后续研究（3.5–3.9） | [阅读](RESEARCH-CONTINUATION.zh-CN.md) | [English](RESEARCH-CONTINUATION.md) |
 | 状态复用机会审计 | [阅读](../research/reuse_audit/README.zh-CN.md) | [English](../research/reuse_audit/README.md) |
 | 云端研究工作区 | [阅读](CLOUD-RESEARCH.zh-CN.md) | [English](CLOUD-RESEARCH.md) |

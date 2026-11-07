@@ -1,0 +1,39 @@
+{
+  "version": "joint-policy-fixture-v1",
+  "kind": "fictitious_int4_current_cohort_not_BGE_or_performance",
+  "k": 2,
+  "cache_entries": 64,
+  "cache_bytes": 32768,
+  "run_limit_seconds": 60,
+  "strategies": ["per_request", "shared_greedy", "rollout"],
+  "documents": [
+    ["D01", [1, 0, 0, 0]], ["D02", [0, 1, 0, 0]],
+    ["D03", [0, 0, 1, 0]], ["D04", [0, 0, 0, 1]],
+    ["D05", [1, 1, 0, 0]], ["D06", [0, 0, 1, 1]],
+    ["D07", [1, 0, 1, 0]], ["D08", [0, 1, 0, 1]]
+  ],
+  "queries": {"qa": [1, 0, 0, 0], "qb": [1, 1, 0, 0], "qc": [0, 0, 1, 0], "qd": [0, 0, 0, 1]},
+  "pages": {"P000": ["D01", "D02", "D03", "D04"], "P001": ["D01", "D02", "D05"], "P002": ["D03", "D04", "D06"]},
+  "default_limits": {"score_evals": 1000, "backend_response_bytes": 100000, "planner_evaluations": 100000},
+  "workloads": {
+    "overlap_and_reuse": [
+      {"op": "admit", "id": "C01", "queries": [["qa", ["D01", "D02", "D03", "D04"]], ["qb", ["D03", "D04", "D05", "D06"]]]},
+      {"op": "drain", "expect": "complete"},
+      {"op": "admit", "id": "C02", "queries": [["qa", ["D01", "D02", "D03", "D04"]], ["qb", ["D03", "D04", "D05", "D06"]]]},
+      {"op": "drain", "expect": "complete"}
+    ],
+    "interrupted_update": [
+      {"op": "admit", "id": "C03", "score_limit": 2, "queries": [["qa", ["D01", "D02", "D03", "D04"]], ["qb", ["D03", "D04", "D05", "D06"]]]},
+      {"op": "drain", "expect": "pending"},
+      {"op": "mutate", "changes": [{"op": "modify", "id": "D05", "vector": [9, 1, 0, 0]}, {"op": "hide", "id": "D02"}]},
+      {"op": "extend", "resource": "score_evals", "extra": 30, "reason": "frozen same-ledger update continuation"},
+      {"op": "drain", "expect": "complete"},
+      {"op": "admit", "id": "C04", "queries": [["qa", ["D01", "D02", "D03", "D04"]], ["qb", ["D03", "D04", "D05", "D06"]]]},
+      {"op": "drain", "expect": "complete"}
+    ],
+    "forced_actions": [
+      {"op": "admit", "id": "C05", "queries": [["qc", ["D07"]], ["qd", ["D08"]]]},
+      {"op": "drain", "expect": "complete"}
+    ]
+  }
+}

@@ -6,6 +6,7 @@ I organize the archive below by document. Each row opens the English or Chinese 
 
 | Document | English | Chinese |
 |---|---|---|
+| Follow-on fictional mechanics artifacts | [阅读](../research/stage35_39_mechanics/README.zh-CN.md) | [English](../research/stage35_39_mechanics/README.md) |
 | Stage 3 follow-on research (3.5–3.9) | [阅读](RESEARCH-CONTINUATION.zh-CN.md) | [English](RESEARCH-CONTINUATION.md) |
 | State-reuse opportunity audit | [Read](../research/reuse_audit/README.md) | [中文](../research/reuse_audit/README.zh-CN.md) |
 | Cloud research workspace | [Read](CLOUD-RESEARCH.md) | [中文](CLOUD-RESEARCH.zh-CN.md) |

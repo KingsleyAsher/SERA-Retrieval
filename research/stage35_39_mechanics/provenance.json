@@ -1,0 +1,33 @@
+{
+  "scope": "fictitious_mechanics_only",
+  "source_artifacts": {
+    "workflow/workflow_fixture.py": {
+      "sha256": "7d046cab545e8acd00f0ff0e3e73ed43630c92b0ac1150d41107f3d2f98f15d6",
+      "kind": "unchanged fictional mechanics artifact"
+    },
+    "workflow/fixture.json": {
+      "sha256": "2e9ac420a778e74db3cf6938b2e10f085472ef75611d72436227c0f5b1bd5949",
+      "kind": "unchanged fictional mechanics artifact"
+    },
+    "workflow/results/run-001.json": {
+      "sha256": "938c6992c71b41fec777a44f72dbb5119c2a2d4b0d7c0339d0670970cc0d1c9d",
+      "kind": "unchanged fictional mechanics artifact"
+    },
+    "policy/joint_policy.py": {
+      "sha256": "225cde837d629b81c2f49764f0ab746dc4b51a002649e4132327f5f2057a7bce",
+      "kind": "unchanged fictional mechanics artifact"
+    },
+    "policy/fixture.json": {
+      "sha256": "774a50985d364b5ced081a371a4fd37acdaffc84a5fb471447276069cfd4591e",
+      "kind": "unchanged fictional mechanics artifact"
+    },
+    "policy/results/run-001.json": {
+      "sha256": "02163bfa4a5922cecbdc2c49c669b77f30b32a505eb95b219ba9c0c73f19a6cb",
+      "kind": "unchanged fictional mechanics artifact"
+    },
+    "policy/results/attribution.json": {
+      "sha256": "5a612287bee91d38d2ff19c9c75be31434417eb573ff173851e888c8e987f0a3",
+      "kind": "unchanged fictional mechanics artifact"
+    }
+  }
+}

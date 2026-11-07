@@ -186,6 +186,10 @@
     {
       "en": "docs/RESEARCH-CONTINUATION.md",
       "zh": "docs/RESEARCH-CONTINUATION.zh-CN.md"
+    },
+    {
+      "en": "research/stage35_39_mechanics/README.md",
+      "zh": "research/stage35_39_mechanics/README.zh-CN.md"
     }
   ],
   "shared_artifacts": [
@@ -274,7 +278,19 @@
     "research/reuse_audit/protocol.json",
     "research/reuse_audit/measure.py",
     "research/reuse_audit/results/checks.json",
-    "research/reuse_audit/results/summary.json"
+    "research/reuse_audit/results/summary.json",
+    "research\\stage35_39_mechanics\\policy\\fixture.json",
+    "research\\stage35_39_mechanics\\policy\\joint_policy.py",
+    "research\\stage35_39_mechanics\\policy\\results\\attribution.json",
+    "research\\stage35_39_mechanics\\policy\\results\\run-001.json",
+    "research\\stage35_39_mechanics\\provenance.json",
+    "research\\stage35_39_mechanics\\verify.py",
+    "research\\stage35_39_mechanics\\workflow\\fixture.json",
+    "research\\stage35_39_mechanics\\workflow\\results\\run-001.json",
+    "research\\stage35_39_mechanics\\workflow\\workflow_fixture.py",
+    "research/stage35_39_mechanics/verify.py",
+    "research/stage35_39_mechanics/workflow/workflow_fixture.py",
+    "research/stage35_39_mechanics/policy/joint_policy.py"
   ],
   "official_license": "LICENSE",
   "license_explanation": [

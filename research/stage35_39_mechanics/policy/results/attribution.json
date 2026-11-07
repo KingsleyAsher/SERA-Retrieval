@@ -1,0 +1,799 @@
+{
+  "version": "joint-policy-attribution-v1",
+  "method": "pure reconstruction from frozen JSON actions and fixture current-snapshot payloads; no Engine/Planner/run_flow call",
+  "run_sha256": "02163bfa4a5922cecbdc2c49c669b77f30b32a505eb95b219ba9c0c73f19a6cb",
+  "row_json_bytes_exclude_envelope_and_interrow_commas": true,
+  "final_retired_is_future_invalidation_not_invalid_delivery": true,
+  "runs": [
+    {
+      "workload": "overlap_and_reuse",
+      "strategy": "per_request",
+      "completed_requests": 4,
+      "backend_response_bytes": 693,
+      "row_json_bytes": 420,
+      "envelope_and_separators_bytes": 273,
+      "fetch_calls": 3,
+      "returned_rows": 6,
+      "distinct_returned_id_versions": 6,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 0,
+      "distinct_final_valid_returned_materials": 6,
+      "score_evals": 8,
+      "catalog_return_bytes": 1146,
+      "row_plus_catalog_return_bytes": 1839,
+      "planner_evaluations": 187,
+      "planner_prefix_simulations": 13,
+      "planner_simulated_steps": 14,
+      "actions": [
+        {
+          "cohort": "C01",
+          "action": "P000",
+          "snapshot": 1,
+          "response_bytes": 373,
+          "row_json_bytes": 280,
+          "envelope_and_separators_bytes": 93,
+          "returned_rows": [
+            {
+              "id": "D01",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D02",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D03",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D04",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C01",
+          "action": "S05",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D05",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C01",
+          "action": "S06",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D06",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "overlap_and_reuse",
+      "strategy": "shared_greedy",
+      "completed_requests": 4,
+      "backend_response_bytes": 693,
+      "row_json_bytes": 420,
+      "envelope_and_separators_bytes": 273,
+      "fetch_calls": 3,
+      "returned_rows": 6,
+      "distinct_returned_id_versions": 6,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 0,
+      "distinct_final_valid_returned_materials": 6,
+      "score_evals": 8,
+      "catalog_return_bytes": 1146,
+      "row_plus_catalog_return_bytes": 1839,
+      "planner_evaluations": 33,
+      "planner_prefix_simulations": 0,
+      "planner_simulated_steps": 0,
+      "actions": [
+        {
+          "cohort": "C01",
+          "action": "P000",
+          "snapshot": 1,
+          "response_bytes": 373,
+          "row_json_bytes": 280,
+          "envelope_and_separators_bytes": 93,
+          "returned_rows": [
+            {
+              "id": "D01",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D02",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D03",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D04",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C01",
+          "action": "S05",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D05",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C01",
+          "action": "S06",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D06",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "overlap_and_reuse",
+      "strategy": "rollout",
+      "completed_requests": 4,
+      "backend_response_bytes": 604,
+      "row_json_bytes": 420,
+      "envelope_and_separators_bytes": 184,
+      "fetch_calls": 2,
+      "returned_rows": 6,
+      "distinct_returned_id_versions": 6,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 0,
+      "distinct_final_valid_returned_materials": 6,
+      "score_evals": 8,
+      "catalog_return_bytes": 1146,
+      "row_plus_catalog_return_bytes": 1750,
+      "planner_evaluations": 242,
+      "planner_prefix_simulations": 14,
+      "planner_simulated_steps": 20,
+      "actions": [
+        {
+          "cohort": "C01",
+          "action": "P001",
+          "snapshot": 1,
+          "response_bytes": 302,
+          "row_json_bytes": 210,
+          "envelope_and_separators_bytes": 92,
+          "returned_rows": [
+            {
+              "id": "D01",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D02",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D05",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C01",
+          "action": "P002",
+          "snapshot": 1,
+          "response_bytes": 302,
+          "row_json_bytes": 210,
+          "envelope_and_separators_bytes": 92,
+          "returned_rows": [
+            {
+              "id": "D03",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D04",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D06",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "interrupted_update",
+      "strategy": "per_request",
+      "completed_requests": 4,
+      "backend_response_bytes": 693,
+      "row_json_bytes": 420,
+      "envelope_and_separators_bytes": 273,
+      "fetch_calls": 3,
+      "returned_rows": 6,
+      "distinct_returned_id_versions": 6,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 1,
+      "distinct_final_valid_returned_materials": 5,
+      "score_evals": 8,
+      "catalog_return_bytes": 2293,
+      "row_plus_catalog_return_bytes": 2986,
+      "planner_evaluations": 187,
+      "planner_prefix_simulations": 13,
+      "planner_simulated_steps": 14,
+      "actions": [
+        {
+          "cohort": "C03",
+          "action": "P000",
+          "snapshot": 1,
+          "response_bytes": 373,
+          "row_json_bytes": 280,
+          "envelope_and_separators_bytes": 93,
+          "returned_rows": [
+            {
+              "id": "D01",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D02",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": true
+            },
+            {
+              "id": "D03",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D04",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C03",
+          "action": "S05",
+          "snapshot": 2,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D05",
+              "version": 2,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C03",
+          "action": "S06",
+          "snapshot": 2,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D06",
+              "version": 1,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "interrupted_update",
+      "strategy": "shared_greedy",
+      "completed_requests": 4,
+      "backend_response_bytes": 693,
+      "row_json_bytes": 420,
+      "envelope_and_separators_bytes": 273,
+      "fetch_calls": 3,
+      "returned_rows": 6,
+      "distinct_returned_id_versions": 6,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 1,
+      "distinct_final_valid_returned_materials": 5,
+      "score_evals": 8,
+      "catalog_return_bytes": 2293,
+      "row_plus_catalog_return_bytes": 2986,
+      "planner_evaluations": 33,
+      "planner_prefix_simulations": 0,
+      "planner_simulated_steps": 0,
+      "actions": [
+        {
+          "cohort": "C03",
+          "action": "P000",
+          "snapshot": 1,
+          "response_bytes": 373,
+          "row_json_bytes": 280,
+          "envelope_and_separators_bytes": 93,
+          "returned_rows": [
+            {
+              "id": "D01",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D02",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": true
+            },
+            {
+              "id": "D03",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D04",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C03",
+          "action": "S05",
+          "snapshot": 2,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D05",
+              "version": 2,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C03",
+          "action": "S06",
+          "snapshot": 2,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D06",
+              "version": 1,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "interrupted_update",
+      "strategy": "rollout",
+      "completed_requests": 4,
+      "backend_response_bytes": 764,
+      "row_json_bytes": 490,
+      "envelope_and_separators_bytes": 274,
+      "fetch_calls": 3,
+      "returned_rows": 7,
+      "distinct_returned_id_versions": 7,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 2,
+      "distinct_final_valid_returned_materials": 5,
+      "score_evals": 8,
+      "catalog_return_bytes": 2293,
+      "row_plus_catalog_return_bytes": 3057,
+      "planner_evaluations": 330,
+      "planner_prefix_simulations": 18,
+      "planner_simulated_steps": 27,
+      "actions": [
+        {
+          "cohort": "C03",
+          "action": "P001",
+          "snapshot": 1,
+          "response_bytes": 302,
+          "row_json_bytes": 210,
+          "envelope_and_separators_bytes": 92,
+          "returned_rows": [
+            {
+              "id": "D01",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D02",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": true
+            },
+            {
+              "id": "D05",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": true
+            }
+          ]
+        },
+        {
+          "cohort": "C03",
+          "action": "P002",
+          "snapshot": 2,
+          "response_bytes": 302,
+          "row_json_bytes": 210,
+          "envelope_and_separators_bytes": 92,
+          "returned_rows": [
+            {
+              "id": "D03",
+              "version": 1,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D04",
+              "version": 1,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            },
+            {
+              "id": "D06",
+              "version": 1,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C03",
+          "action": "S05",
+          "snapshot": 2,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D05",
+              "version": 2,
+              "snapshot": 2,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "forced_actions",
+      "strategy": "per_request",
+      "completed_requests": 2,
+      "backend_response_bytes": 320,
+      "row_json_bytes": 140,
+      "envelope_and_separators_bytes": 180,
+      "fetch_calls": 2,
+      "returned_rows": 2,
+      "distinct_returned_id_versions": 2,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 0,
+      "distinct_final_valid_returned_materials": 2,
+      "score_evals": 2,
+      "catalog_return_bytes": 1146,
+      "row_plus_catalog_return_bytes": 1466,
+      "planner_evaluations": 44,
+      "planner_prefix_simulations": 2,
+      "planner_simulated_steps": 2,
+      "actions": [
+        {
+          "cohort": "C05",
+          "action": "S07",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D07",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C05",
+          "action": "S08",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D08",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "forced_actions",
+      "strategy": "shared_greedy",
+      "completed_requests": 2,
+      "backend_response_bytes": 320,
+      "row_json_bytes": 140,
+      "envelope_and_separators_bytes": 180,
+      "fetch_calls": 2,
+      "returned_rows": 2,
+      "distinct_returned_id_versions": 2,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 0,
+      "distinct_final_valid_returned_materials": 2,
+      "score_evals": 2,
+      "catalog_return_bytes": 1146,
+      "row_plus_catalog_return_bytes": 1466,
+      "planner_evaluations": 22,
+      "planner_prefix_simulations": 0,
+      "planner_simulated_steps": 0,
+      "actions": [
+        {
+          "cohort": "C05",
+          "action": "S07",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D07",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C05",
+          "action": "S08",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D08",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workload": "forced_actions",
+      "strategy": "rollout",
+      "completed_requests": 2,
+      "backend_response_bytes": 320,
+      "row_json_bytes": 140,
+      "envelope_and_separators_bytes": 180,
+      "fetch_calls": 2,
+      "returned_rows": 2,
+      "distinct_returned_id_versions": 2,
+      "repeated_exact_id_version_returns": 0,
+      "not_missing_at_action_input": 0,
+      "not_visible_at_delivery": 0,
+      "retired_by_final_version_or_visibility": 0,
+      "distinct_final_valid_returned_materials": 2,
+      "score_evals": 2,
+      "catalog_return_bytes": 1146,
+      "row_plus_catalog_return_bytes": 1466,
+      "planner_evaluations": 22,
+      "planner_prefix_simulations": 0,
+      "planner_simulated_steps": 0,
+      "actions": [
+        {
+          "cohort": "C05",
+          "action": "S07",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D07",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        },
+        {
+          "cohort": "C05",
+          "action": "S08",
+          "snapshot": 1,
+          "response_bytes": 160,
+          "row_json_bytes": 70,
+          "envelope_and_separators_bytes": 90,
+          "returned_rows": [
+            {
+              "id": "D08",
+              "version": 1,
+              "snapshot": 1,
+              "was_missing_at_action_input": true,
+              "visible_at_delivery": true,
+              "retired_by_final_version_or_visibility": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
