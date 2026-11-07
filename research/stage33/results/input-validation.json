@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "1da1a3d7dbfc6128750f67ffca4e1745f62cb618360a8a53fc5c70274fbdedaf",
+  "files": 6,
+  "integrity": {
+    "frozen.sqlite": "ok",
+    "embedding-cache.sqlite": "ok"
+  },
+  "manifest_file_hashes_verified": [
+    "frozen.sqlite",
+    "source-metadata.json"
+  ],
+  "vector_hash_verified": true,
+  "chunks": 1213,
+  "dimension": 1024,
+  "revision": 1216,
+  "logical_metadata_digest_recomputed": false
+}

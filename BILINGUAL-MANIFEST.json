@@ -170,6 +170,10 @@
     {
       "en": "research/stage33/README.md",
       "zh": "research/stage33/README.zh-CN.md"
+    },
+    {
+      "en": "research/stage33/REPORT.md",
+      "zh": "research/stage33/REPORT.zh-CN.md"
     }
   ],
   "shared_artifacts": [
@@ -247,7 +251,10 @@
     "research/stage33/private_replay.py",
     "research/stage33/frontier.py",
     "research/stage33/results/checks.json",
-    "research/stage33/provenance.json"
+    "research/stage33/provenance.json",
+    "research/stage33/summarize.py",
+    "research/stage33/results/input-validation.json",
+    "research/stage33/results/offline-summary.json"
   ],
   "official_license": "LICENSE",
   "license_explanation": [

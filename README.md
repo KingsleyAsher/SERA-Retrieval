@@ -8,7 +8,7 @@ I started SERA to explore whether retrieval, candidate reuse, update repair and 
 
 ## Current evidence · 2026-11-07
 
-The common executor and stages 3.1–3.2 are delivered. [Stage 3.3](research/stage33/README.md) now passes its public continuation/accounting gate; the specified 128-case offline diagnostic is blocked by missing private frozen inputs. Expert training is paused. Predictive prefetching, learned stopping and strict certification are research directions rather than shipped capabilities.
+The common executor and stages 3.1–3.2 are delivered. [Stage 3.3](research/stage33/README.md) has completed both gates: public continuation/accounting checks pass, and all 128 fixed offline cases show no observed pruning potential. See the [diagnostic report](research/stage33/REPORT.md). Expert training is paused. Predictive prefetching, learned stopping and strict certification are research directions rather than shipped capabilities.
 
 The private snapshot contains 1,213 chunks from 114 sources with BGE-M3 dense1024 embeddings. Stage-3 diagnostics use 16 development families and 48 unique texts, including 32 rewrites. Semantic labels remain unreviewed.
 

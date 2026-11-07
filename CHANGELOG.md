@@ -2,6 +2,10 @@
 
 [English](CHANGELOG.md) | [简体中文](CHANGELOG.zh-CN.md)
 
+## 2026-11-07 — Stage-3.3 frozen diagnostic completed
+
+The original private assets are now available externally. All 128 fixed cases completed over 32 different rewrites, with 5,120 block comparisons and no observed raw coverage violations. Every tested bound excludes zero unscored eligible vectors; even the combined-bound oracle diagnostic has zero potential. I retain this negative result without expanding the grid or enabling online stopping. Current-bound/support timings are separated from evaluation work; 13 stage-3.3 and 27 foundation tests pass. Only aggregate evidence is public. See the [completed diagnostic report](research/stage33/REPORT.md).
+
 ## 2026-11-07 — Reuse foundations and stage-3.3 first gate
 
 I delivered isolated read-only adapters, versioned snapshots, lifecycle/dependency guards, cooperative resource management and canonical exact/ANN baselines. The foundation passes 27 tests and five historical regression programs. Its synthetic benchmark preserves exact ranking with lower peak memory from windowing; it does not establish a quality-matched ANN or architecture advantage. See the [engineering report](research/reuse_foundation/REPORT.md).

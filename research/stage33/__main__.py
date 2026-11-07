@@ -18,8 +18,8 @@ def main():
     result=unittest.TextTestRunner(verbosity=2).run(suite)
     root=Path(__file__).resolve().parents[2]
     report=dict(format=1,tests=result.testsRun,passed=result.wasSuccessful(),
-        prerequisite_groups=10,geometry_tests=2,synthetic_only=True,
-        stage33_status='gate1_verified_gate2_input_pending' if result.wasSuccessful() else 'gate1_failed',
+        prerequisite_groups=10,geometry_tests=2,input_location_tests=1,synthetic_only=True,
+        stage33_status='mechanics_verified_replay_status_separate' if result.wasSuccessful() else 'gate1_failed',
         frozen_inputs=input_availability(root),online_pruning=False,expert_training=False,
         code_sha256={p.name:digest(p.read_bytes()) for p in Path(__file__).parent.glob('*.py')})
     atomic_publish(args.output,report)

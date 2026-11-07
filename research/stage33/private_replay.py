@@ -18,9 +18,10 @@ from .diagnostics import build_statistics, diagnose, input_availability
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output',required=True,help='new private directory outside the repository')
+    parser.add_argument('--inputs-root',help='explicit external directory with .private-kb-experiments and ChatGPT')
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[2]
-    availability=input_availability(root)
+    availability=input_availability(root,args.inputs_root)
     if availability['missing']:
         print(packed(availability)); return 2
     output=Path(args.output).resolve()
@@ -30,7 +31,12 @@ def main():
     sys.path.insert(0,str(original))
     spec=importlib.util.spec_from_file_location('_stage32_private_inputs',original/'run_experiment.py')
     module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    if args.inputs_root:
+        module.ROOT=Path(args.inputs_root).resolve()
+        module.PRIVATE=module.ROOT/'.private-kb-experiments'
     records,queries,texts,namespace,manifest,load=module.load_inputs()
+    if manifest['snapshot_revision'] != 1216 or len(set(texts)) != 48:
+        raise ValueError('frozen revision or unique query count mismatch')
     x=np.stack([r['vector'] for r in records]); queries=np.asarray(queries)
     if x.shape!=(1213,1024) or queries.shape!=(48,1024) or not all(r['visible'] for r in records):
         raise ValueError('frozen dataset shape or main-scope visibility mismatch')
@@ -51,7 +57,8 @@ def main():
             pools[C,a]=list(map(int,result.keys))
             ledger.charge(observed_ann_distances=int(result.computed_distances),observed_ann_visits=int(result.visited_members))
         index.save(str(output/f'anchors-C{C}.usearch'))
-        fill.append(dict(C=C,seconds=time.perf_counter()-started,resources=ledger.dump()))
+        fill.append(dict(C=C,seconds=time.perf_counter()-started,resources=ledger.dump(),
+                         index_sha256=digest((output/f'anchors-C{C}.usearch').read_bytes())))
     anchor_vectors=queries[::3]
     cases=[]; layouts=[]
     for nlist in (16,64):
@@ -70,14 +77,16 @@ def main():
         for qi in range(48):
             if qi%3==0: continue
             match_ledger=Ledger(); match_ledger.charge(anchor_match_scores=16,anchor_vector_bytes=anchor_vectors.nbytes)
+            match_started=time.perf_counter()
             values=canonical(anchor_vectors,queries[qi])
             eligible=[a for a in range(16) if digest(queries[3*a].tobytes())!=digest(queries[qi].tobytes())]
             if not eligible: raise ValueError('no compatible old anchor')
             a=min(eligible,key=lambda a:(-float(values[a]),a))
+            match_seconds=time.perf_counter()-match_started
             for C in (50,200):
                 data=diagnose(x,queries[qi],queries[3*a],stats,pools[C,a],k=10)
                 cases.append(dict(query_index=qi,matched_anchor=a,nlist=nlist,C=C,
-                                  matching=match_ledger.dump(),**data))
+                                  matching=match_ledger.dump(),matching_seconds=match_seconds,**data))
     if len(cases)!=128: raise AssertionError('expected 128 fixed diagnostic cases')
     atomic_publish(output/'diagnostics.json',dict(cases=cases,layouts=layouts,ann_fill=fill,
         actual_128_cases_executed=True,strict_certificate=False,online_pruning=False,

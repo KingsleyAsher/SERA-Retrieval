@@ -52,27 +52,36 @@ def diagnose(vectors, query, old_query, statistics, paid_positions, k=10):
     positions = sorted(set(map(int, paid_positions)))
     if not positions or min(positions) < 0 or max(positions) >= len(x):
         raise ValueError('invalid paid support pool')
+    total_started = time.perf_counter()
     online, evaluation = Ledger(), Ledger()
     online.charge(support_scores=len(positions), support_vector_bytes=len(positions)*x.shape[1]*8)
+    tick = time.perf_counter()
     support = canonical(x[positions], q)
     threshold = float(np.sort(support)[-k]) if len(support) >= k else None
+    support_seconds = time.perf_counter()-tick
     evaluation.charge(oracle_scores=len(x), oracle_vector_bytes=x.nbytes,
-                      old_support_scores=len(positions), old_support_vector_bytes=len(positions)*x.shape[1]*8)
+                      old_support_scores=len(positions), old_support_vector_bytes=len(positions)*x.shape[1]*8,
+                      l2_reference_vectors=len(x), l2_reference_vector_bytes=x.nbytes)
+    tick = time.perf_counter()
     old_support = canonical(x[positions], old)
     old_threshold = float(np.sort(old_support)[-k]) if len(positions) >= k else None
     beta_support = float(np.linalg.norm(x[positions], axis=1).max())
     delta = float(np.linalg.norm(q-old))
     truth = canonical(x, q)
     oracle = float(np.sort(truth)[-min(k, len(x))])
+    evaluation_seconds = time.perf_counter()-tick
     rows, unique = [], {name: set() for name in ('ball', 'sphere', 'stat', 'combined', 'transfer')}
     categories = dict(sphere_only=0, stat_only=0, both=0, neither=0)
     violations = []
-    started = time.perf_counter()
+    planning_seconds = 0.
     for j, stat in enumerate(statistics):
+        tick = time.perf_counter()
         online.charge(bound_blocks=1, bound_payload_bytes=len(packed(stat).encode()))
         observed = observed_bounds(q, stat)
+        planning_seconds += time.perf_counter()-tick
         # Old bound construction is explicitly charged to evaluation, not free online input.
-        evaluation.charge(old_bound_blocks=1)
+        tick = time.perf_counter()
+        evaluation.charge(old_bound_blocks=1, old_bound_payload_bytes=len(packed(stat).encode()))
         previous = observed_bounds(old, stat)
         observed['transfer'] = previous['combined'] + stat['beta']*delta
         members = set(stat['members']); remaining = members-set(positions)
@@ -82,6 +91,7 @@ def diagnose(vectors, query, old_query, statistics, paid_positions, k=10):
                     if not name.startswith('lb_') and value < maximum}
         failures.update({name: value-true_l2 for name, value in observed.items()
                          if name.startswith('lb_') and value > true_l2})
+        evaluation_seconds += time.perf_counter()-tick
         if failures: violations.append(dict(block=j, raw_gaps=failures))
         separated = {name: threshold is not None and observed[name] < threshold for name in unique}
         a, b = separated['sphere'], separated['stat']
@@ -96,22 +106,24 @@ def diagnose(vectors, query, old_query, statistics, paid_positions, k=10):
     return dict(blocks=rows, categories=categories, raw_coverage_violations=violations,
         paid_threshold=threshold, old_transferred_support_threshold=None if old_threshold is None else old_threshold-beta_support*delta,
         oracle_threshold=oracle, unique_unscored_excludable={name:len(values) for name,values in unique.items()},
-        denominator=len(x), planning_seconds=time.perf_counter()-started,
+        denominator=len(x), planning_seconds=planning_seconds, support_seconds=support_seconds,
+        evaluation_seconds=evaluation_seconds, diagnostic_total_seconds=time.perf_counter()-total_started,
         online_constructible_cost=online.dump(), evaluation_cost=evaluation.dump(),
         strict_certificate=False, online_pruning_qualified=False)
 
 
-def input_availability(root):
+def input_availability(root, inputs_root=None):
     root = Path(root)
-    required = [root/'research/.private-kb-experiments/plan-v1-stage1/frozen.sqlite',
-                root/'research/.private-kb-experiments/plan-v1-stage1/source-metadata.json',
-                root/'research/.private-kb-experiments/plan-v1-stage1/manifest.json',
-                root/'research/.private-kb-experiments/embedding-cache.sqlite',
-                root/'research/ChatGPT/真实查询复用研究-v0.14/queries.json']
+    base = Path(inputs_root).resolve() if inputs_root else root/'research'
+    required = [base/'.private-kb-experiments/plan-v1-stage1/frozen.sqlite',
+                base/'.private-kb-experiments/plan-v1-stage1/source-metadata.json',
+                base/'.private-kb-experiments/plan-v1-stage1/manifest.json',
+                base/'.private-kb-experiments/embedding-cache.sqlite',
+                base/'ChatGPT/真实查询复用研究-v0.14/queries.json']
     # Mirror the archived replay's ROOT calculation exactly; no private directory crawl.
     replay = root/'research/ChatGPT/总体计划执行-v1/阶段三-紧凑缓存与IVF/run_experiment.py'
     text = replay.read_text()
     return dict(status='blocked_missing_frozen_inputs' if any(not p.is_file() for p in required) else 'requires_explicit_private_replay',
-                missing=[str(p.relative_to(root)) for p in required if not p.is_file()],
+                missing=[str(p.relative_to(base)) for p in required if not p.is_file()],
                 replay_sha256=digest(text.encode()), actual_128_cases_executed=False,
                 screening_decision=None, synthetic_is_not_a_replacement=True)

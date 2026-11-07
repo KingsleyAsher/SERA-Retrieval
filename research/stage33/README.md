@@ -1,8 +1,10 @@
-# Stage 3.3 implementation and partial delivery · 2026-11-07
+# Stage 3.3 implementation and delivery · 2026-11-07
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-I implemented the first gate of the [existing protocol](../ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/下一部分协议.en.md) in an isolated executor. Ten prerequisite groups and two geometry tests pass. **The second gate remains blocked:** the private frozen inputs are absent, so the specified 128 diagnostic cases have not run. This delivery establishes neither geometric pruning potential nor an architecture performance advantage. Expert training, online bound stopping and strict certification remain disabled.
+The completed offline [diagnostic report](REPORT.md) supersedes the earlier input-blocked checkpoint. All 128 fixed cases ran and showed no observed pruning potential.
+
+I implemented the first gate of the [existing protocol](../ChatGPT/总体计划执行-v1/阶段三-前沿接续与界诊断协议/下一部分协议.en.md) in an isolated executor. Ten prerequisite groups and two geometry tests pass. At the initial checkpoint the second gate was blocked by absent inputs; it is now completed with a negative result. This delivery establishes neither geometric pruning potential nor an architecture performance advantage. Expert training, online bound stopping and strict certification remain disabled.
 
 ## Execution and accounting
 
@@ -20,7 +22,7 @@ Public checks reproduce the 0.5 seed / 0.6 first member / 0.95 tail case across 
 
 Coverage violations are retained with raw signed gaps, without an epsilon repair. Ordinary float64 values never become machine certificates. Oracle scores, old support scores and old-bound construction remain in explicit evaluation ledgers; transfer is an offline diagnostic, not an assumed free online capability. Statistical construction bytes, storage payload, matching, ANN fill and support scores have separate cost records. Maintenance costs and numeric error certification remain unmeasured. The two invented geometry tests check formulas and cost separation, not the production dataset's screening signal.
 
-`private_replay.py` provides the fixed 32 rewrites × 2 layouts × 2 pool sizes loop. It uses the historical loader without launching its benchmark, rebuilds KMeans16/64 with protocol settings, saves partition/statistic fingerprints, fills independent ANN50/200 anchor pools and selects anchors by actual query-vector score with stable ID ties and self-vector exclusion. Family labels do not choose the anchor. The first driver entry check exits with code 2 when any frozen asset is absent; **the full private driver has not been exercised end to end here**. Its output must be a new private directory outside the repository. It contains no network or embedding fallback. The proposed 8/32 and 20% screening rule remains a draft; this delivery makes no screening decision.
+`private_replay.py` provides the fixed 32 rewrites × 2 layouts × 2 pool sizes loop. It uses the historical loader without launching its benchmark, rebuilds KMeans16/64 with protocol settings, saves partition/statistic fingerprints, fills independent ANN50/200 anchor pools and selects anchors by actual query-vector score with stable ID ties and self-vector exclusion. Family labels do not choose the anchor. The first driver entry check exits with code 2 when any frozen asset is absent; **the full private driver has now completed end to end with the original uploaded inputs**. Its output must be a new private directory outside the repository. It contains no network or embedding fallback. The proposed 8/32 and 20% screening rule remains a draft; this delivery makes no screening decision.
 
 ## Reproduce and current stop
 
@@ -29,7 +31,7 @@ python -m research.stage33 --output /tmp/stage33-checks.json
 python -m research.stage33.private_replay --output /tmp/new-private-stage33-run
 ```
 
-The [check record](results/checks.json) pins source hashes and reports **12 tests passed**. The replay preflight was executed and correctly blocked. Missing inputs, at the historical loader's expected paths, are:
+The [check record](results/checks.json) pins source hashes and reports **13 tests passed**, including an external-input-location test. The original preflight correctly blocked; the supplied assets now reside outside the repository. The historical expected paths were:
 
 - `research/.private-kb-experiments/plan-v1-stage1/frozen.sqlite`
 - `research/.private-kb-experiments/plan-v1-stage1/source-metadata.json`
@@ -39,4 +41,4 @@ The [check record](results/checks.json) pins source hashes and reports **12 test
 
 These must describe the original 1,213 chunks, revision 1216, BGE-M3 dense1024 and cached 48 query vectors. Synthetic inputs are not substituted. No raw private diagnostic output belongs in the public repository.
 
-I stop with gate one verified and gate two input-blocked. The immutable protocol, stage-3.2 artifacts and earlier engineering results are preserved. Restoring the specified frozen assets enables the offline replay and a new report; it does not authorize online stopping. A successful second gate still needs evidence review before that next part.
+I stop with both gates completed and no observed pruning potential at the fixed configurations. The immutable protocol, stage-3.2 artifacts and earlier engineering results are preserved. The new report records the actual replay. Online stopping remains disabled; evidence review is required before another part.

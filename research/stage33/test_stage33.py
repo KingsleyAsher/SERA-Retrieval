@@ -7,7 +7,7 @@ import numpy as np
 
 from research.reuse_foundation.common import Ledger, canonical, framework
 from .frontier import FrontierEngine
-from .diagnostics import build_statistics, diagnose, observed_bounds
+from .diagnostics import build_statistics, diagnose, observed_bounds, input_availability
 
 
 class FrontierChecks(unittest.TestCase):
@@ -130,6 +130,8 @@ class GeometryChecks(unittest.TestCase):
         self.assertEqual(sum(r['categories'].values()),2)
         self.assertEqual(r['online_constructible_cost']['consumed']['support_scores'],10)
         self.assertEqual(r['evaluation_cost']['consumed']['oracle_scores'],32)
+        self.assertEqual(r['evaluation_cost']['consumed']['l2_reference_vectors'],32)
+        self.assertGreaterEqual(r['diagnostic_total_seconds'],r['planning_seconds'])
         self.assertLessEqual(r['unique_unscored_excludable']['combined'],22)
         self.assertFalse(r['strict_certificate'])
         for stat in stats:
@@ -143,3 +145,16 @@ class GeometryChecks(unittest.TestCase):
         r=diagnose(x,x[0],x[0],[stat],[0],k=10)
         self.assertIsNone(r['paid_threshold']); self.assertTrue(r['raw_coverage_violations'])
         self.assertEqual(r['unique_unscored_excludable']['combined'],0)
+
+
+class InputLocationChecks(unittest.TestCase):
+    def test_external_asset_root_does_not_require_repository_symlinks(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(__file__).resolve().parents[2]
+            missing=input_availability(root,td)
+            self.assertEqual(len(missing['missing']),5)
+            for name in missing['missing']:
+                path=Path(td)/name; path.parent.mkdir(parents=True,exist_ok=True); path.touch()
+            found=input_availability(root,td)
+            self.assertEqual(found['missing'],[])
+            self.assertFalse(found['actual_128_cases_executed'])

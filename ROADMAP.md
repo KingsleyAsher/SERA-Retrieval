@@ -12,7 +12,7 @@ My working hypothesis is that candidate reuse, sparse activation, update repair 
 | 2 | Can multiple backends share requests, snapshots, actions and budgets? | Reference implementation and correctness repairs delivered |
 | 3.1 | Does cached-candidate reuse earn its lookup and fill cost? | Completed; no net advantage demonstrated |
 | 3.2 | Do compact caches and seed-guided IVF improve the trade-off? | Completed; layout improvement and limited same-budget coverage gains |
-| 3.3 | Can partial partitions resume correctly, and are geometric bounds useful? | Public gate-one checks pass; frozen-input offline diagnostics blocked. [Partial delivery](research/stage33/README.md) |
+| 3.3 | Can partial partitions resume correctly, and are geometric bounds useful? | Both gates complete; 128 fixed cases show no pruning potential. [Report](research/stage33/REPORT.md) |
 | Remaining stage 3 | When are sparse routing, CPU calibration and prefetching worthwhile? | Pending |
 | 4 | Can an independent path issue numerically valid exact certificates? | Theory under review; implementation pending |
 | 5 | Does shared coordination add value beyond separate components? | Pending |

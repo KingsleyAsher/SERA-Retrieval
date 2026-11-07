@@ -399,6 +399,21 @@
     "changelog_updates": {
       "CHANGELOG.md": "61307f67af7074998226caadcc20441c64ccdcdd8b98b0b84233a4b17f8b3e08",
       "CHANGELOG.zh-CN.md": "87c571e6f5fa0614707b94dfd3c95644999fe61cb12284fb6ea03c6745c66f9d"
+    },
+    "superseded_by": "stage33_completed_diagnostic"
+  },
+  "stage33_completed_diagnostic": {
+    "date": "2026-11-07",
+    "provenance": "research/stage33/provenance.json",
+    "provenance_sha256": "91f96077092d109f839723940d3bc57c64db7d6bcf1831a56e9211038c4c1cc8",
+    "actual_128_cases_executed": true,
+    "independent_queries": 32,
+    "private_raw_data_published": false,
+    "outcome": "no_observed_pruning_potential_at_fixed_configurations",
+    "current_status_sha256": "d81f10ebeb124c26ed0d93ba1071b345a88f7585df518590db9fb85c233d386e",
+    "changelog_hashes": {
+      "CHANGELOG.md": "e537822a997101b69c3d424fd6edb2a1c08e0a53866207a6393b2773519e6eae",
+      "CHANGELOG.zh-CN.md": "e490a319027df72bcdd15daee08b7dcf2dadc4574f618eca3d0e06b6deff5737"
     }
   }
 }
